@@ -1,0 +1,22 @@
+[
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  { "locations": [ "/" ] },
+  {
+    "columns": [{
+        "columnId": 63490,
+        "columnName": "CITY"
+      },{
+        "columnId": 62468,
+        "columnName": "NAME"
+      }],
+    "objectDomain": "Table",
+    "objectId": 62469,
+    "objectName": "DB1.PUBLIC.CUSTOMERS"
+  },
+  ...
+]

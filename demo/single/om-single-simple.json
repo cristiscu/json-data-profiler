@@ -1,0 +1,16 @@
+[
+    {
+       "*objectDomain": "string", 
+       "*objectId": "number", 
+       "*objectName": "string", 
+       "*stageKind": "string", 
+       "*locations": [ "string" ],
+       "*columns": 
+       [
+          {
+             "columnId": "number", 
+             "columnName": "string"
+          }
+       ]
+    }
+ ]

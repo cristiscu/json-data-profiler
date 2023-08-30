@@ -1,0 +1,4273 @@
+[
+  {
+    "columns": [
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "locations": [
+      "/e94568840fecb76d3e337dce8db4f200"
+    ]
+  },
+  {
+    "locations": [
+      "/41dd6577dda21627c2ab047a2150a9c4"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_MKTSEGMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_MKTSEGMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 63492,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 61443,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "locations": [
+      "/c149cb58d2ba814b620d3792c8bf31f7"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_MKTSEGMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "locations": [
+      "/4be073f72a6dfd2496f571bf327b2679"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/db0f7e662eef697318794e42976b95fe"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_MKTSEGMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 63492,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 61443,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "locations": [
+      "/f4961fbac82a2000d2c8ab2674d4294f"
+    ]
+  },
+  {
+    "locations": [
+      "/a667020f8f65a7f390b0124dd2bb62c5"
+    ]
+  },
+  {
+    "locations": [
+      "/6c0b43f99f1fe63c59f429450a6cb04d"
+    ]
+  },
+  {
+    "locations": [
+      "/d6b8f4ebe56af7012fcee21af182f838"
+    ]
+  },
+  {
+    "locations": [
+      "/2599c2c62bbe2b8e335ceea4a8964a1f"
+    ]
+  },
+  {
+    "locations": [
+      "/f46107b6a4d0445b8c9c95b1f957857d"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "CREDITS_USED_COMPUTE"
+      },
+      {
+        "columnName": "WAREHOUSE_NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.WAREHOUSE_METERING_HISTORY$V3"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 65538,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 64514,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "locations": [
+      "/0e3a3c505bde14c9025131dcdd5dd7bc"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/92c3fd88ed04c4d4a45b17c20d2b4e8d"
+    ]
+  },
+  {
+    "locations": [
+      "/049d9756feb4a6c21feaa88b910b9394"
+    ]
+  },
+  {
+    "locations": [
+      "/fbfccd635b5dd5b4bcbae9cc9c9b55aa"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_MKTSEGMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "locations": [
+      "/ed82da628a1bdb6e2e3129c17ca48a01"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_MKTSEGMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "locations": [
+      "/efe0eb1f08b2d2e3c415327a80e48686"
+    ]
+  },
+  {
+    "locations": [
+      "/42bac68f3eecdf63d6aec753c2f5e937"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_PARTKEY"
+      },
+      {
+        "columnName": "L_RECEIPTDATE"
+      },
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_EXTENDEDPRICE"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      },
+      {
+        "columnName": "L_SHIPMODE"
+      },
+      {
+        "columnName": "L_ORDERKEY"
+      },
+      {
+        "columnName": "L_COMMITDATE"
+      },
+      {
+        "columnName": "L_LINENUMBER"
+      },
+      {
+        "columnName": "L_LINESTATUS"
+      },
+      {
+        "columnName": "L_SUPPKEY"
+      },
+      {
+        "columnName": "L_SHIPINSTRUCT"
+      },
+      {
+        "columnName": "L_RETURNFLAG"
+      },
+      {
+        "columnName": "L_SHIPDATE"
+      },
+      {
+        "columnName": "L_TAX"
+      },
+      {
+        "columnName": "L_COMMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "CREDITS_USED_COMPUTE"
+      },
+      {
+        "columnName": "WAREHOUSE_NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.WAREHOUSE_METERING_HISTORY$V3"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 65538,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 64514,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "locations": [
+      "/d0e09de07729027bcb845b3ab3f8b71a"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnId": 63492,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 61443,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "V"
+      },
+      {
+        "columnName": "T"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.WEATHER.DAILY_14_TOTAL"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_MKTSEGMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "locations": [
+      "/7d9fa5d68b07463605a6d0138ee58578"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_PARTKEY"
+      },
+      {
+        "columnName": "L_RECEIPTDATE"
+      },
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_EXTENDEDPRICE"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      },
+      {
+        "columnName": "L_SHIPMODE"
+      },
+      {
+        "columnName": "L_ORDERKEY"
+      },
+      {
+        "columnName": "L_COMMITDATE"
+      },
+      {
+        "columnName": "L_LINENUMBER"
+      },
+      {
+        "columnName": "L_LINESTATUS"
+      },
+      {
+        "columnName": "L_SUPPKEY"
+      },
+      {
+        "columnName": "L_SHIPINSTRUCT"
+      },
+      {
+        "columnName": "L_RETURNFLAG"
+      },
+      {
+        "columnName": "L_SHIPDATE"
+      },
+      {
+        "columnName": "L_TAX"
+      },
+      {
+        "columnName": "L_COMMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "locations": [
+      "/d95766c10bd9fa17a89c5ed8a025d3d0"
+    ]
+  },
+  {
+    "locations": [
+      "/307a87f2bdaa8b84e44e85d355e30042"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnId": 62466,
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 62467,
+    "objectName": "DB1.PUBLIC.CITIES"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/3d82e4cfa6df639597a43343e38bb687"
+    ]
+  },
+  {
+    "locations": [
+      "/cab634d72816264fd349f519e38d8c7e"
+    ]
+  },
+  {
+    "locations": [
+      "/8480e7838cf5d7a1e2be001b0bf54269"
+    ]
+  },
+  {
+    "locations": [
+      "/548fab7461439a6b6c852687680cfc48"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_MKTSEGMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "locations": [
+      "/d92f7b18b59c114233d7307f9b3b8732"
+    ]
+  },
+  {
+    "locations": [
+      "/a540fede241ba377ae8a8a484ceafeb9"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnId": 65538,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 64514,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 65538,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 64514,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "CUMULATIVE_REPORTED_DEATHS"
+      },
+      {
+        "columnName": "CASES"
+      },
+      {
+        "columnName": "CUMULATIVE_DEATHS"
+      },
+      {
+        "columnName": "POSITIVE_TESTS"
+      },
+      {
+        "columnName": "CUMULATIVE_REPORTED_CASES"
+      },
+      {
+        "columnName": "REPORTED_DEATHS"
+      },
+      {
+        "columnName": "POPULATION"
+      },
+      {
+        "columnName": "CUMULATIVE_POSITIVE_TESTS"
+      },
+      {
+        "columnName": "AREA"
+      },
+      {
+        "columnName": "REPORTED_TESTS"
+      },
+      {
+        "columnName": "TOTAL_TESTS"
+      },
+      {
+        "columnName": "CUMULATIVE_TOTAL_TESTS"
+      },
+      {
+        "columnName": "DEATHS"
+      },
+      {
+        "columnName": "REPORTED_CASES"
+      },
+      {
+        "columnName": "AREA_TYPE"
+      },
+      {
+        "columnName": "DATE"
+      },
+      {
+        "columnName": "CUMULATIVE_CASES"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "PUBLIC_MKTPLC_VIEWS.OPEN_DATA.VW_CASES"
+  },
+  {
+    "locations": [
+      "/a1b1bb753dd31e2072d0bd6e58697723"
+    ]
+  },
+  {
+    "locations": [
+      "/4bb1a406272ea523aba95467f62b6ff7"
+    ]
+  },
+  {
+    "locations": [
+      "/ec04456f44f846e40842565ea0da5de0"
+    ]
+  },
+  {
+    "locations": [
+      "/6296166796b8b0be8de7b497596e1d0e"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 64513,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 63490,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/5d9d1f70c65f2b7904745ac1f9601675"
+    ]
+  },
+  {
+    "locations": [
+      "/d3927b7d7e2de8784427931a0b573d89"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_PARTKEY"
+      },
+      {
+        "columnName": "L_RECEIPTDATE"
+      },
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_EXTENDEDPRICE"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      },
+      {
+        "columnName": "L_SHIPMODE"
+      },
+      {
+        "columnName": "L_ORDERKEY"
+      },
+      {
+        "columnName": "L_COMMITDATE"
+      },
+      {
+        "columnName": "L_LINESTATUS"
+      },
+      {
+        "columnName": "L_LINENUMBER"
+      },
+      {
+        "columnName": "L_SUPPKEY"
+      },
+      {
+        "columnName": "L_SHIPINSTRUCT"
+      },
+      {
+        "columnName": "L_RETURNFLAG"
+      },
+      {
+        "columnName": "L_SHIPDATE"
+      },
+      {
+        "columnName": "L_TAX"
+      },
+      {
+        "columnName": "L_COMMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "locations": [
+      "/26876429c5bfafd68197d4bf595163c7"
+    ]
+  },
+  {
+    "locations": [
+      "/6d6c1d1d41a552894017083c7981ebf0"
+    ]
+  },
+  {
+    "locations": [
+      "/4c3905eddfa54b2369ffad7388312a36"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_PHONE"
+      },
+      {
+        "columnName": "C_COMMENT"
+      },
+      {
+        "columnName": "C_CUSTKEY"
+      },
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_MKTSEGMENT"
+      },
+      {
+        "columnName": "C_ADDRESS"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 64513,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 63490,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "locations": [
+      "/9013effdd660d50dbd787e604655b639"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "locations": [
+      "/403400c1a84adc73532558c973d217cb"
+    ]
+  },
+  {
+    "locations": [
+      "/b6200cc8cbc19fe23d7f2f0b33093cb7"
+    ]
+  },
+  {
+    "locations": [
+      "/8667950124eb701a9c0d0c6ce45bafee"
+    ]
+  },
+  {
+    "locations": [
+      "/2cd12ce72536c626b24c18c5b20faf77"
+    ]
+  },
+  {
+    "locations": [
+      "/425ea7eaa7b7faf37f90b5640969bbc0"
+    ]
+  },
+  {
+    "locations": [
+      "/06f72b331cb4dcd25cdebdae25b7ad19"
+    ]
+  },
+  {
+    "locations": [
+      "/17d105609c1cfe9ac7755e2a77a93310"
+    ]
+  },
+  {
+    "locations": [
+      "/e99f2683bd96ff3993d09f5c48223c85"
+    ]
+  },
+  {
+    "locations": [
+      "/3981654f9eeeb84b6f8ac09cd1db89a0"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnId": 63492,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 61443,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "locations": [
+      "/ee5068df37276a0486002d6064a4aaaa"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/ac4d3e356c4047aea851ad74fb82cb4b"
+    ]
+  },
+  {
+    "locations": [
+      "/ecf7f0fa2fb85361d0bd3919cd27057e"
+    ]
+  },
+  {
+    "locations": [
+      "/e95317c6abf15ddad4df2de3687f94dc"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "O_CUSTKEY"
+      },
+      {
+        "columnName": "O_ORDERKEY"
+      },
+      {
+        "columnName": "O_TOTALPRICE"
+      },
+      {
+        "columnName": "O_ORDERPRIORITY"
+      },
+      {
+        "columnName": "O_CLERK"
+      },
+      {
+        "columnName": "O_ORDERDATE"
+      },
+      {
+        "columnName": "O_SHIPPRIORITY"
+      },
+      {
+        "columnName": "O_ORDERSTATUS"
+      },
+      {
+        "columnName": "O_COMMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/fc222ada987a1240ff91bf92390b8a95"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnId": 63490,
+        "columnName": "CITY"
+      },
+      {
+        "columnId": 62468,
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 62469,
+    "objectName": "DB1.PUBLIC.CUSTOMERS"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 65538,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 64514,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_MKTSEGMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "locations": [
+      "/aad846182e7aa1c92e2629d89845539f"
+    ]
+  },
+  {
+    "locations": [
+      "/3be1f3ebb00143d971b9d679b584d129"
+    ]
+  },
+  {
+    "locations": [
+      "/c371e8ada45ee5a1b4b6ca0b29727147"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_PARTKEY"
+      },
+      {
+        "columnName": "L_RECEIPTDATE"
+      },
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_EXTENDEDPRICE"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      },
+      {
+        "columnName": "L_SHIPMODE"
+      },
+      {
+        "columnName": "L_ORDERKEY"
+      },
+      {
+        "columnName": "L_COMMITDATE"
+      },
+      {
+        "columnName": "L_LINENUMBER"
+      },
+      {
+        "columnName": "L_LINESTATUS"
+      },
+      {
+        "columnName": "L_SUPPKEY"
+      },
+      {
+        "columnName": "L_SHIPINSTRUCT"
+      },
+      {
+        "columnName": "L_RETURNFLAG"
+      },
+      {
+        "columnName": "L_TAX"
+      },
+      {
+        "columnName": "L_SHIPDATE"
+      },
+      {
+        "columnName": "L_COMMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "locations": [
+      "/4cb4d108b6e90766804d99b7d5285a35"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_MKTSEGMENT"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "locations": [
+      "/6ec0390c0e90de88d9de9eadddb31c13"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/cec991da94a018805ba82e06ac44b93e"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnId": 63492,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 61443,
+    "objectName": "DB1.PUBLIC.T1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "locations": [
+      "/13ec2dbada080b4b271a281afd87e433"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "L_DISCOUNT"
+      },
+      {
+        "columnName": "L_QUANTITY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM"
+  },
+  {
+    "locations": [
+      "/f03d1824075dca5d6e280e35188598b6"
+    ]
+  },
+  {
+    "locations": [
+      "/6fed27b4e221b0ad5fb797d9d60d0ec0"
+    ]
+  },
+  {
+    "locations": [
+      "/365885fd0726744c80fe58e0e5889ba0"
+    ]
+  },
+  {
+    "locations": [
+      "/3fa7cdf069308fab0c37711556fc5482"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_PHONE"
+      },
+      {
+        "columnName": "C_COMMENT"
+      },
+      {
+        "columnName": "C_CUSTKEY"
+      },
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_MKTSEGMENT"
+      },
+      {
+        "columnName": "C_ADDRESS"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_CUSTKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_CUSTKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_CUSTKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_CUSTKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_CUSTKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_CUSTKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_CUSTKEY"
+      },
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_CUSTKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_CUSTKEY"
+      },
+      {
+        "columnName": "C_NAME"
+      },
+      {
+        "columnName": "C_NATIONKEY"
+      },
+      {
+        "columnName": "C_ACCTBAL"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "C_NATIONKEY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectName": "SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      },
+      {
+        "columnId": 43017,
+        "columnName": "SALES"
+      },
+      {
+        "columnId": 43013,
+        "columnName": "COUNTRY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      },
+      {
+        "columnId": 43017,
+        "columnName": "SALES"
+      },
+      {
+        "columnId": 43013,
+        "columnName": "COUNTRY"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 68616,
+        "columnName": "reserve_name"
+      },
+      {
+        "columnId": 68614,
+        "columnName": "reserve_id"
+      },
+      {
+        "columnId": 68615,
+        "columnName": "reserve_number"
+      },
+      {
+        "columnId": 68617,
+        "columnName": "contact_name"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 67590,
+    "objectName": "\"IndianReserves\".PUBLIC.\"Reserves\""
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      },
+      {
+        "columnId": 43014,
+        "columnName": "EDUCATION"
+      },
+      {
+        "columnId": 43017,
+        "columnName": "SALES"
+      },
+      {
+        "columnId": 43013,
+        "columnName": "COUNTRY"
+      },
+      {
+        "columnId": 43016,
+        "columnName": "GENDER"
+      },
+      {
+        "columnId": 43012,
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 43015,
+        "columnName": "STATUS"
+      },
+      {
+        "columnId": 43014,
+        "columnName": "EDUCATION"
+      },
+      {
+        "columnId": 43017,
+        "columnName": "SALES"
+      },
+      {
+        "columnId": 43013,
+        "columnName": "COUNTRY"
+      },
+      {
+        "columnId": 43016,
+        "columnName": "GENDER"
+      },
+      {
+        "columnId": 43012,
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 41988,
+    "objectName": "TEST_PIVOT.PUBLIC.DEMOGRAPHICS"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "MODIFIED_ON"
+      },
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTED_TO"
+      },
+      {
+        "columnName": "TABLE_CATALOG"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      },
+      {
+        "columnName": "TABLE_SCHEMA"
+      },
+      {
+        "columnName": "GRANTED_BY"
+      },
+      {
+        "columnName": "CREATED_ON"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "TABLE_CATALOG"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      },
+      {
+        "columnName": "TABLE_SCHEMA"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "TABLE_CATALOG"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      },
+      {
+        "columnName": "TABLE_SCHEMA"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "TABLE_CATALOG"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      },
+      {
+        "columnName": "TABLE_SCHEMA"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTED_TO"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      },
+      {
+        "columnName": "GRANTED_BY"
+      },
+      {
+        "columnName": "CREATED_ON"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "MODIFIED_ON"
+      },
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTED_TO"
+      },
+      {
+        "columnName": "TABLE_CATALOG"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      },
+      {
+        "columnName": "TABLE_SCHEMA"
+      },
+      {
+        "columnName": "GRANTED_BY"
+      },
+      {
+        "columnName": "CREATED_ON"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "OWNER"
+      },
+      {
+        "columnName": "CREATED_ON"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "MODIFIED_ON"
+      },
+      {
+        "columnName": "GRANTED_TO"
+      },
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "TABLE_CATALOG"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      },
+      {
+        "columnName": "TABLE_SCHEMA"
+      },
+      {
+        "columnName": "GRANTED_BY"
+      },
+      {
+        "columnName": "CREATED_ON"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "MUST_CHANGE_PASSWORD"
+      },
+      {
+        "columnName": "PASSWORD_LAST_SET_TIME"
+      },
+      {
+        "columnName": "LAST_NAME"
+      },
+      {
+        "columnName": "LAST_SUCCESS_LOGIN"
+      },
+      {
+        "columnName": "EXT_AUTHN_UID"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "OWNER"
+      },
+      {
+        "columnName": "EXT_AUTHN_DUO"
+      },
+      {
+        "columnName": "LOCKED_UNTIL_TIME"
+      },
+      {
+        "columnName": "EMAIL"
+      },
+      {
+        "columnName": "DEFAULT_ROLE"
+      },
+      {
+        "columnName": "DEFAULT_WAREHOUSE"
+      },
+      {
+        "columnName": "DISABLED"
+      },
+      {
+        "columnName": "DISPLAY_NAME"
+      },
+      {
+        "columnName": "LOGIN_NAME"
+      },
+      {
+        "columnName": "HAS_RSA_PUBLIC_KEY"
+      },
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "BYPASS_MFA_UNTIL"
+      },
+      {
+        "columnName": "DEFAULT_SECONDARY_ROLE"
+      },
+      {
+        "columnName": "DEFAULT_NAMESPACE"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "EXPIRES_AT"
+      },
+      {
+        "columnName": "SNOWFLAKE_LOCK"
+      },
+      {
+        "columnName": "FIRST_NAME"
+      },
+      {
+        "columnName": "CREATED_ON"
+      },
+      {
+        "columnName": "HAS_PASSWORD"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "TABLE_CATALOG"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      },
+      {
+        "columnName": "TABLE_SCHEMA"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "GRANTED_TO"
+      },
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTED_TO"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      },
+      {
+        "columnName": "GRANTED_BY"
+      },
+      {
+        "columnName": "CREATED_ON"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "GRANTED_TO"
+      },
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "TABLE_CATALOG"
+      },
+      {
+        "columnName": "PRIVILEGE"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "GRANTED_ON"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "GRANT_OPTION"
+      },
+      {
+        "columnName": "TABLE_SCHEMA"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_ROLES$V4"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "GRANTEE_NAME"
+      },
+      {
+        "columnName": "ROLE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.GRANTS_TO_USERS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      },
+      {
+        "columnName": "DISABLED"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.USERS$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "DELETED_ON"
+      },
+      {
+        "columnName": "COMMENT"
+      },
+      {
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ACCOUNT_USAGE.ROLES$V2"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "CURRENCY"
+      },
+      {
+        "columnName": "END_DATE"
+      },
+      {
+        "columnName": "EXPIRATION_DATE"
+      },
+      {
+        "columnName": "DATE"
+      },
+      {
+        "columnName": "CONTRACT_NUMBER"
+      },
+      {
+        "columnName": "CAPACITY_BALANCE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ORGANIZATION_USAGE.CONTRACT_ITEMS$V1"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "CURRENCY"
+      },
+      {
+        "columnName": "USAGE_IN_CURRENCY"
+      },
+      {
+        "columnName": "REGION"
+      },
+      {
+        "columnName": "USAGE_DATE"
+      },
+      {
+        "columnName": "ACCOUNT_NAME"
+      },
+      {
+        "columnName": "SERVICE_LEVEL"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ORGANIZATION_USAGE.USAGE_IN_CURRENCY_DAILY$V1"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "CURRENCY"
+      },
+      {
+        "columnName": "END_DATE"
+      },
+      {
+        "columnName": "EXPIRATION_DATE"
+      },
+      {
+        "columnName": "DATE"
+      },
+      {
+        "columnName": "CONTRACT_NUMBER"
+      },
+      {
+        "columnName": "CAPACITY_BALANCE"
+      }
+    ],
+    "objectDomain": "View",
+    "objectName": "SNOWFLAKE.ORGANIZATION_USAGE.CONTRACT_ITEMS$V1"
+  },
+  {
+    "locations": [
+      "/093c7e15736ebe6cdfb753f034da3e21"
+    ]
+  },
+  {
+    "locations": [
+      "/f4aa59694644343d3dd2074311f457dd"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/ffcfd84fa41b796e46fc2d2c9be51bea"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "locations": [
+      "/19c6c63f78b2f0678f75863cb511bca9"
+    ]
+  },
+  {
+    "locations": [
+      "/4d7f1c67912bab16686c2a76583faf9a"
+    ]
+  },
+  {
+    "locations": [
+      "/3f642977f4dc64bc2c6ad50d76c49124"
+    ]
+  },
+  {
+    "locations": [
+      "/45c4f067c65660bbe02cb626ce0de18b"
+    ]
+  },
+  {
+    "locations": [
+      "/a6f2ff7dd36b935c2c0bdb384aac05c4"
+    ]
+  },
+  {
+    "locations": [
+      "/6a4483aca2837422f1bcca73d48fffd8"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/8a0ae5a4e3f0f3971d10c72e5c5418e0"
+    ]
+  },
+  {
+    "locations": [
+      "/fe03668c9c37c054bf3e2c2415651399"
+    ]
+  },
+  {
+    "locations": [
+      "/e0f2e1d0b8e7a4fc62e5b423c8184225"
+    ]
+  },
+  {
+    "locations": [
+      "/68b8b7b5b48686b2f3c8eecdaa5766ba"
+    ]
+  },
+  {
+    "locations": [
+      "/8511ab30e528f81c1f601e7b66ffa48a"
+    ]
+  },
+  {
+    "locations": [
+      "/8c92f8682b9af53f8e36f870a3a6af29"
+    ]
+  },
+  {
+    "locations": [
+      "/408c87b26fec3c105968585f0e415659"
+    ]
+  },
+  {
+    "locations": [
+      "/614260c404e01e932dcb4d15d7b0a4f4"
+    ]
+  },
+  {
+    "locations": [
+      "/976c528823ec1a2c84109755df6edc4f"
+    ]
+  },
+  {
+    "locations": [
+      "/b8509bbf16d8c42a9f1b9e1b234dd6d9"
+    ]
+  },
+  {
+    "locations": [
+      "/e887b8b871c7d4c6ac461ccbf5e4ed30"
+    ]
+  },
+  {
+    "locations": [
+      "/8383f9d925cc7ce50968b6f0123090d0"
+    ]
+  },
+  {
+    "locations": [
+      "/13d65f9b1e74d2fda055936b7ca56a46"
+    ]
+  },
+  {
+    "locations": [
+      "/f6bb7c79b7c2cd82542d96308592578f"
+    ]
+  },
+  {
+    "locations": [
+      "/31ee4613b7484900c2767b2f5fcafee5"
+    ]
+  },
+  {
+    "locations": [
+      "/4d78d15ff40cc7d394834b5e02da58ec"
+    ]
+  },
+  {
+    "locations": [
+      "/29042d0f846d5a2e5695a716d4680ee9"
+    ]
+  },
+  {
+    "locations": [
+      "/5e612906f48c4a619d08231617c40304"
+    ]
+  },
+  {
+    "locations": [
+      "/9c8f72393463cbbe70815592d8b3f404"
+    ]
+  },
+  {
+    "locations": [
+      "/6ea51ca843c943f406a1e2f2c7b96800"
+    ]
+  },
+  {
+    "locations": [
+      "/d5a0b393bae837cb9b31466a3a7ee9b4"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/2c32b253c761e9da567e82a722bf3891"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/0f40930d47e2c72c6aba532da95fc0e3"
+    ]
+  },
+  {
+    "locations": [
+      "/27a120ecdccf2187728f4746f2fde81a"
+    ]
+  },
+  {
+    "locations": [
+      "/3a7ea4e6c151b6637c39cd97d5bce94a"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/a2d8f92026b97d2cb09cc2be8f74c66c"
+    ]
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "locations": [
+      "/80f4ef3ddc2cf021aab91abf35f1980a"
+    ]
+  },
+  {
+    "locations": [
+      "/b829ef8bbe4a2a842ce90c7e86690863"
+    ]
+  },
+  {
+    "locations": [
+      "/d45ad129ce8548a9fbefd64d9fcdaf0d"
+    ]
+  },
+  {
+    "locations": [
+      "/314c7bdf6fdcb3236a69ac2bdb02cba8"
+    ]
+  },
+  {
+    "locations": [
+      "/dc5c053a8488fec908225da8e64a60f1"
+    ]
+  },
+  {
+    "locations": [
+      "/95fe981dc9ecb6e95b5314cb2fc88517"
+    ]
+  },
+  {
+    "columns": [
+      {
+        "columnId": 72710,
+        "columnName": "NAME"
+      },
+      {
+        "columnId": 72709,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 71686,
+    "objectName": "DB2.PUBLIC.D1"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 73734,
+        "columnName": "VALUE"
+      },
+      {
+        "columnId": 73733,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 72710,
+    "objectName": "DB2.PUBLIC.D2"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 72710,
+        "columnName": "NAME"
+      },
+      {
+        "columnId": 72709,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 71686,
+    "objectName": "DB2.PUBLIC.D1"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 73734,
+        "columnName": "VALUE"
+      },
+      {
+        "columnId": 73733,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 72710,
+    "objectName": "DB2.PUBLIC.D2"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 72707,
+        "columnName": "ID"
+      },
+      {
+        "columnId": 72708,
+        "columnName": "VALUE"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 71684,
+    "objectName": "DB2.PUBLIC.D2"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 72706,
+        "columnName": "NAME"
+      },
+      {
+        "columnId": 72705,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 71682,
+    "objectName": "DB2.PUBLIC.D1"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 72707,
+        "columnName": "ID"
+      },
+      {
+        "columnId": 72708,
+        "columnName": "VALUE"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 71684,
+    "objectName": "DB2.PUBLIC.D2"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 72706,
+        "columnName": "NAME"
+      },
+      {
+        "columnId": 72705,
+        "columnName": "ID"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 71682,
+    "objectName": "DB2.PUBLIC.D1"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 73729,
+        "columnName": "ID"
+      },
+      {
+        "columnId": 73730,
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 72706,
+    "objectName": "DB2.PUBLIC.D1"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 73731,
+        "columnName": "ID"
+      },
+      {
+        "columnId": 73732,
+        "columnName": "VALUE"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 72708,
+    "objectName": "DB2.PUBLIC.D2"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 73729,
+        "columnName": "ID"
+      },
+      {
+        "columnId": 73730,
+        "columnName": "NAME"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 72706,
+    "objectName": "DB2.PUBLIC.D1"
+  },
+  {
+    "columns": [
+      {
+        "columnId": 73731,
+        "columnName": "ID"
+      },
+      {
+        "columnId": 73732,
+        "columnName": "VALUE"
+      }
+    ],
+    "objectDomain": "Table",
+    "objectId": 72708,
+    "objectName": "DB2.PUBLIC.D2"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "CSCUTARU",
+    "stageKind": "User"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  },
+  {
+    "objectDomain": "Stage",
+    "objectId": 1,
+    "objectName": "WORKSHEETS_APP.PUBLIC.BLOBS",
+    "stageKind": "Internal Named"
+  }
+]

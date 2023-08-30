@@ -1,0 +1,41 @@
+[
+   {
+      "columns (485)": [{ "columnName (2)": "string (2): L_DISCOUNT, L_QUANTITY" }],
+      "objectDomain (485)": "string (2): Table, View", 
+      "objectName (485)": "string (27): SNOWFLAKE_SAMPLE_DAT..., SNOWFLAKE_SAMPLE_DAT..., SNOWFLAKE.ACCOUNT_US..., ..."
+   },
+   {
+      "locations (104)": [ "string (1): /e94568840fecb76d3e3..." ]
+   },
+   {
+      "columns (56)": 
+      [
+         {
+            "columnId (1)": "number (1): 63492", 
+            "columnName (1)": "string (1): ID"
+         }
+      ],
+      "objectDomain (56)": "string (1): Table", 
+      "objectId (56)": "number (13): 61443, 64514, 62467, ...", 
+      "objectName (56)": "string (7): DB1.PUBLIC.T1, DB1.PUBLIC.CITIES, DB1.PUBLIC.CUSTOMERS, ..."
+   },
+   {
+      "objectDomain (38)": "string (1): Stage", 
+      "objectId (38)": "number (1): 1", 
+      "objectName (38)": "string (2): WORKSHEETS_APP.PUBLI..., CSCUTARU", 
+      "stageKind (38)": "string (2): Internal Named, User"
+   },
+   {
+      "argumentSignature (9106)": "string (1): ()", 
+      "dataType (9106)": "string (1): VARCHAR(16777216)", 
+      "objectDomain (9106)": "string (1): Function", 
+      "objectId (9106)": "number (1): 113", 
+      "objectName (9106)": "string (1): FRUITS_DB.PUBLIC.F"
+   },
+   {
+      "argumentSignature (210)": "string (1): ()", 
+      "objectDomain (210)": "string (1): Function", 
+      "objectId (210)": "number (1): 113", 
+      "objectName (210)": "string (1): FRUITS_DB.PUBLIC.F"
+   }
+]

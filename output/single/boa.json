@@ -1,0 +1,10 @@
+[
+   {
+      "*columns (201)": [{ "columnName (2)": "string (2): L_DISCOUNT, L_QUANTITY" }],
+      "*objectDomain (239)": "string (3): Table, Stage, View", 
+      "*objectName (239)": "string (21): SNOWFLAKE_SAMPLE_DAT..., SNOWFLAKE_SAMPLE_DAT..., DB1.PUBLIC.T1, ...", 
+      "*locations (104)": [ "string (1): /e94568840fecb76d3e3..." ],
+      "*objectId (94)": "number (14): 61443, 1, 64514, ...", 
+      "*stageKind (38)": "string (2): Internal Named, User"
+   }
+]

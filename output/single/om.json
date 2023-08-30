@@ -1,0 +1,16 @@
+[
+   {
+      "*objectDomain (114)": "string (2): Stage, Table", 
+      "*objectId (114)": "number (11): 1, 62469, 61443, ...", 
+      "*objectName (114)": "string (6): WORKSHEETS_APP.PUBLI..., DB1.PUBLIC.CUSTOMERS, DB1.PUBLIC.T1, ...", 
+      "*stageKind (104)": "string (1): Internal Named", 
+      "*locations (38)": [ "string (1): /" ],
+      "*columns (10)": 
+      [
+         {
+            "columnId (2)": "number (2): 63490, 62468", 
+            "columnName (2)": "string (2): CITY, NAME"
+         }
+      ]
+   }
+]

@@ -1,0 +1,24 @@
+[
+   {
+      "objectDomain (2)": "string (2): Stage, Stage2", 
+      "objectId (2)": "number (2): 1, 22", 
+      "*decimal (1)": "number (1): 1.456", 
+      "*objectName (1)": "string (1): WORKSHEETS_APP.PUBLI...", 
+      "*stageKind (1)": "string (1): Internal Named", 
+      "*null (1)": "null (1): None", 
+      "*boolean (1)": "bool (1): False", 
+      "*array (1)": [ "string (1): alpha" ],
+      "*arrayN (1)": [ "number (1): 1" ],
+      "*object (1)": 
+      {
+         "lat (1)": "number (1): 11.2", 
+         "long (1)": "number (1): 14.4"
+      },
+      "*object2 (1)": 
+      {
+         "lat (1)": "number (1): 11.2", 
+         "long (1)": "number (1): 14.4", 
+         "coords (1)": "string (1): 11.2, 14.4"
+      }
+   }
+]

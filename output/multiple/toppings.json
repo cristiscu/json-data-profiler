@@ -1,0 +1,25 @@
+[
+   {
+      "id (3)": "string (3): 0001, 0002, 0003", 
+      "type (3)": "string (1): donut", 
+      "name (3)": "string (3): Cake, Raised, Old Fashioned", 
+      "ppu (3)": "number (1): 0.55", 
+      "batters (3)": 
+      {
+         "batter (1)": 
+         [
+            {
+               "id (4)": "string (4): 1001, 1002, 1003, ...", 
+               "type (4)": "string (4): Regular, Chocolate, Blueberry, ..."
+            }
+         ]
+      },
+      "topping (3)": 
+      [
+         {
+            "id (7)": "string (7): 5001, 5002, 5005, ...", 
+            "type (7)": "string (7): None, Glazed, Sugar, ..."
+         }
+      ]
+   }
+]
