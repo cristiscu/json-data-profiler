@@ -3,7 +3,8 @@ JSON Data Profiler
 
 Extracts metadata information from any JSON data files.
 
-**Features**
+Features
+========
 
 * Shows only single top object in homogenous collections, with optional properties. Use this option when you assume all array objects have the same type, with some properties not always required.
 * Shows different types of objects in heterogenous collections, with no optional properties. Use this option when you may have objects of different types in your arrays, and each object type has the same manatory properties.
@@ -15,7 +16,8 @@ Extracts metadata information from any JSON data files.
 * Truncates large text values.
 * Shows objects with one single property, and arrays with primive values, on one single line.
 
-**Phase One: Assuming Homogenous Collections**
+Phase One: Assuming Homogenous Collections
+==========================================
 
 For the **om.json** input data file, we can first assume that most if not all objects in an array have the same type. For instance, we do not mix customers with orders. The following output files tells us which properties do not appear in all array objects:
 
@@ -38,7 +40,8 @@ For the **om.json** input data file, we can first assume that most if not all ob
 ]
 ```
 
-**Phase Two: Adding More Profiling Data**
+Phase Two: Adding More Profiling Data
+=====================================
 
 On the same data structure as before, we added how many objects used a property, how many distinct values we had for each property, what are the first few values for each property:
 
@@ -61,7 +64,8 @@ On the same data structure as before, we added how many objects used a property,
 ]
 ```
 
-**Phase Three: Assuming Heterogenous Collections**
+Phase Three: Assuming Heterogenous Collections
+==============================================
 
 When you had plenty of optional properties in phase one, you may assume that the collections are not as homogenous, and you can get a better different view, in which each object type is always defined by the exact same set of mandatory properties:
 
