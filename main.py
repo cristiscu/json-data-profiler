@@ -1,4 +1,5 @@
 import json, sys, os
+#import xmltodict
 
 # adjust these to get a different layout
 single_object = False
@@ -100,11 +101,12 @@ class Obj:
     
     def dump(self, last=True, lastVal=False):
         keys = list(self.props.keys())
-        prop = self.props[keys[0]]
-        if lastVal:
-            return f'{{ {prop.dumpProp(last, lastVal)} }}'
-        if self.hasSingleProp():
-            return f'{getIndent(self.level)}{{ {prop.dumpProp(last, lastVal)} }}\n'
+        if len(keys) > 0:
+            prop = self.props[keys[0]]
+            if lastVal:
+                return f'{{ {prop.dumpProp(last, lastVal)} }}'
+            if self.hasSingleProp():
+                return f'{getIndent(self.level)}{{ {prop.dumpProp(last, lastVal)} }}\n'
 
         s = f'{getIndent(self.level)}{{\n'
         for key in self.props: s += self.props[key].dump(key is keys[-1])
@@ -188,7 +190,12 @@ class Arr:
         return s
 
 def process_file(filename, single):
+    if not filename.lower().endswith('.json'): return
     with open(f'spool/{filename}', 'r') as file:
+        #if filename.lower().endswith('.xml'):
+        #    data = xmltodict.parse(file.read())
+        #    data = json.loads(data)
+        #else:
         data = json.load(file)
 
     # process input file

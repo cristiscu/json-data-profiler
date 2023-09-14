@@ -1,0 +1,70 @@
+{
+   "problems (1)": 
+   [
+      {
+         "Diabetes (1)": 
+         [
+            {
+               "medications (1)": 
+               [
+                  {
+                     "medicationsClasses (1)": 
+                     [
+                        {
+                           "className (1)": 
+                           [
+                              {
+                                 "associatedDrug (1)": 
+                                 [
+                                    {
+                                       "name (1)": "string (1): asprin", 
+                                       "dose (1)": "string (1): ", 
+                                       "strength (1)": "string (1): 500 mg"
+                                    }
+                                 ],
+                                 "associatedDrug#2 (1)": 
+                                 [
+                                    {
+                                       "name (1)": "string (1): somethingElse", 
+                                       "dose (1)": "string (1): ", 
+                                       "strength (1)": "string (1): 500 mg"
+                                    }
+                                 ]
+                              }
+                           ],
+                           "className2 (1)": 
+                           [
+                              {
+                                 "associatedDrug (1)": 
+                                 [
+                                    {
+                                       "name (1)": "string (1): asprin", 
+                                       "dose (1)": "string (1): ", 
+                                       "strength (1)": "string (1): 500 mg"
+                                    }
+                                 ],
+                                 "associatedDrug#2 (1)": 
+                                 [
+                                    {
+                                       "name (1)": "string (1): somethingElse", 
+                                       "dose (1)": "string (1): ", 
+                                       "strength (1)": "string (1): 500 mg"
+                                    }
+                                 ]
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ],
+               "labs (1)": [{ "missing_field (1)": "string (1): missing_value" }]
+            }
+         ],
+         "Asthma (1)": 
+         [
+            {
+            }
+         ]
+      }
+   ]
+}

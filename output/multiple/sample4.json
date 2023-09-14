@@ -1,0 +1,74 @@
+{
+   "web-app (1)": 
+   {
+      "servlet (1)": 
+      [
+         {
+            "servlet-name (3)": "string (3): cofaxCDS, cofaxEmail, cofaxTools", 
+            "servlet-class (3)": "string (3): org.cofax.cds.CDSSer..., org.cofax.cds.EmailS..., org.cofax.cms.CofaxT...", 
+            "init-param (3)": 
+            {
+               "configGlossary:installationAt (1)": "string (1): Philadelphia, PA", 
+               "configGlossary:adminEmail (1)": "string (1): ksm@pobox.com", 
+               "configGlossary:poweredBy (1)": "string (1): Cofax", 
+               "configGlossary:poweredByIcon (1)": "string (1): /images/cofax.gif", 
+               "configGlossary:staticPath (1)": "string (1): /content/static", 
+               "templateProcessorClass (1)": "string (1): org.cofax.WysiwygTem...", 
+               "templateLoaderClass (1)": "string (1): org.cofax.FilesTempl...", 
+               "templatePath (1)": "string (1): templates", 
+               "templateOverridePath (1)": "string (1): ", 
+               "defaultListTemplate (1)": "string (1): listTemplate.htm", 
+               "defaultFileTemplate (1)": "string (1): articleTemplate.htm", 
+               "useJSP (1)": "bool (1): False", 
+               "jspListTemplate (1)": "string (1): listTemplate.jsp", 
+               "jspFileTemplate (1)": "string (1): articleTemplate.jsp", 
+               "cachePackageTagsTrack (1)": "number (1): 200", 
+               "cachePackageTagsStore (1)": "number (1): 200", 
+               "cachePackageTagsRefresh (1)": "number (1): 60", 
+               "cacheTemplatesTrack (1)": "number (1): 100", 
+               "cacheTemplatesStore (1)": "number (1): 50", 
+               "cacheTemplatesRefresh (1)": "number (1): 15", 
+               "cachePagesTrack (1)": "number (1): 200", 
+               "cachePagesStore (1)": "number (1): 100", 
+               "cachePagesRefresh (1)": "number (1): 10", 
+               "cachePagesDirtyRead (1)": "number (1): 10", 
+               "searchEngineListTemplate (1)": "string (1): forSearchEnginesList...", 
+               "searchEngineFileTemplate (1)": "string (1): forSearchEngines.htm", 
+               "searchEngineRobotsDb (1)": "string (1): WEB-INF/robots.db", 
+               "useDataStore (1)": "bool (1): True", 
+               "dataStoreClass (1)": "string (1): org.cofax.SqlDataSto...", 
+               "redirectionClass (1)": "string (1): org.cofax.SqlRedirec...", 
+               "dataStoreName (1)": "string (1): cofax", 
+               "dataStoreDriver (1)": "string (1): com.microsoft.jdbc.s...", 
+               "dataStoreUrl (1)": "string (1): jdbc:microsoft:sqlse...", 
+               "dataStoreUser (1)": "string (1): sa", 
+               "dataStorePassword (1)": "string (1): dataStoreTestQuery", 
+               "dataStoreTestQuery (1)": "string (1): SET NOCOUNT ON;selec...", 
+               "dataStoreLogFile (1)": "string (1): /usr/local/tomcat/lo...", 
+               "dataStoreInitConns (1)": "number (1): 10", 
+               "dataStoreMaxConns (1)": "number (1): 100", 
+               "dataStoreConnUsageLimit (1)": "number (1): 100", 
+               "dataStoreLogLevel (1)": "string (1): debug", 
+               "maxUrlLength (1)": "number (1): 500"
+            }
+         },
+         {
+            "servlet-name (2)": "string (2): cofaxAdmin, fileServlet", 
+            "servlet-class (2)": "string (2): org.cofax.cds.AdminS..., org.cofax.cds.FileSe..."
+         }
+      ],
+      "servlet-mapping (1)": 
+      {
+         "cofaxCDS (1)": "string (1): /", 
+         "cofaxEmail (1)": "string (1): /cofaxutil/aemail/*", 
+         "cofaxAdmin (1)": "string (1): /admin/*", 
+         "fileServlet (1)": "string (1): /static/*", 
+         "cofaxTools (1)": "string (1): /tools/*"
+      },
+      "taglib (1)": 
+      {
+         "taglib-uri (1)": "string (1): cofax.tld", 
+         "taglib-location (1)": "string (1): /WEB-INF/tlds/cofax...."
+      }
+   }
+}

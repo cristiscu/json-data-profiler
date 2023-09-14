@@ -1,0 +1,60 @@
+{
+   "$schema (1)": "string (1): http://json-schema.o...", 
+   "$id (1)": "string (1): https://example.com/...", 
+   "title (1)": "string (1): Record of employee", 
+   "description (1)": "string (1): This document record...", 
+   "type (1)": "string (1): object", 
+   "properties (1)": 
+   {
+      "id (1)": 
+      {
+         "description (1)": "string (1): A unique identifier ...", 
+         "type (1)": "string (1): number"
+      },
+      "name (1)": 
+      {
+         "description (1)": "string (1): name of the employee", 
+         "type (1)": "string (1): string", 
+         "minLength (1)": "number (1): 2"
+      },
+      "age (1)": 
+      {
+         "description (1)": "string (1): age of the employee", 
+         "type (1)": "string (1): number", 
+         "minimum (1)": "number (1): 16"
+      },
+      "hobbies (1)": 
+      {
+         "description (1)": "string (1): hobbies of the emplo...", 
+         "type (1)": "string (1): object", 
+         "properties (1)": 
+         {
+            "indoor (1)": 
+            {
+               "type (1)": "string (1): array", 
+               "items (1)": 
+               {
+                  "description (1)": "string (1): List of hobbies", 
+                  "type (1)": "string (1): string"
+               },
+               "minItems (1)": "number (1): 1", 
+               "uniqueItems (1)": "bool (1): True"
+            },
+            "outdoor (1)": 
+            {
+               "type (1)": "string (1): array", 
+               "items (1)": 
+               {
+                  "description (1)": "string (1): List of hobbies", 
+                  "type (1)": "string (1): string"
+               },
+               "minItems (1)": "number (1): 1", 
+               "uniqueItems (1)": "bool (1): True"
+            }
+         },
+         "required (1)": [ "string (1): indoor" ]
+      }
+   },
+   "required (1)": [ "string (1): id" ],
+   "additionalProperties (1)": "bool (1): False"
+}
