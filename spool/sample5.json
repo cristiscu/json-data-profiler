@@ -1,0 +1,418 @@
+{
+  "OwnerUserID": "76729752305",
+  "OwnerUserName": "marcelb",
+  "URL": "/ca-central-1.aws/deptdev/goldendeer-query-performance-dQoer2md1",
+  "DashboardID": "Qoer2md1",
+  "DashboardName": "goldendeer Query Performance",
+  "RefreshedUtc": "2021-12-29T14:49:57.146324Z",
+  "ViewedUtc": "0001-01-01T00:00:00",
+  "ModifiedUtc": "2022-01-07T22:06:51.625565Z",
+  "Role": "ACCOUNTADMIN",
+  "Warehouse": "XT_MONITOR_WH",
+  "Database": "",
+  "Schema": "",
+  "Contents": {
+    "rows": [
+      {
+        "height": 0,
+        "cells": [
+          {
+            "type": "query",
+            "pid": "ukHYVTKL0U",
+            "version": 0,
+            "refreshing": false,
+            "displayMode": "table"
+          },
+          {
+            "type": "query",
+            "pid": "2Z1rr7arwJc",
+            "version": 0,
+            "refreshing": false,
+            "displayMode": "table"
+          }
+        ]
+      },
+      {
+        "height": 2,
+        "cells": [
+          {
+            "type": "query",
+            "pid": "NWD48FIskC",
+            "version": 0,
+            "refreshing": false,
+            "displayMode": "table"
+          }
+        ]
+      },
+      {
+        "height": 2,
+        "cells": [
+          {
+            "type": "query",
+            "pid": "59jGwBlM59d",
+            "version": 8,
+            "refreshing": false,
+            "displayMode": "table"
+          }
+        ]
+      },
+      {
+        "height": 2,
+        "cells": [
+          {
+            "type": "query",
+            "pid": "2tT458covO",
+            "version": 4,
+            "refreshing": false,
+            "displayMode": "table"
+          }
+        ]
+      },
+      {
+        "height": 2,
+        "cells": [
+          {
+            "type": "query",
+            "pid": "QMKjrMRMTR",
+            "version": 0,
+            "refreshing": false,
+            "displayMode": "table"
+          }
+        ]
+      },
+      {
+        "height": 2,
+        "cells": [
+          {
+            "type": "query",
+            "pid": "4BjnajTNjry",
+            "version": 4,
+            "refreshing": false,
+            "displayMode": "table"
+          }
+        ]
+      },
+      {
+        "height": 2,
+        "cells": [
+          {
+            "type": "query",
+            "pid": "48dWaHy34a0",
+            "version": 4,
+            "refreshing": false,
+            "displayMode": "chart"
+          }
+        ]
+      }
+    ],
+    "manualRefresh": false,
+    "context": {
+      "role": "",
+      "warehouse": "",
+      "database": "",
+      "schema": ""
+    }
+  },
+  "NumRows": 7,
+  "NumWidgets": 8,
+  "Worksheets": [
+    {
+      "FolderID": "Qoer2md1",
+      "FolderName": "goldendeer Query Performance",
+      "OwnerUserID": "76729752305",
+      "OwnerUserName": "marcelb",
+      "Version": 3,
+      "URL": "/ca-central-1.aws/deptdev/wukHYVTKL0U#query",
+      "WorksheetID": "ukHYVTKL0U",
+      "WorksheetName": "Queued vs Running Queries in the Last Month",
+      "StartedUtc": "2021-12-29T15:18:17.1845321Z",
+      "EndedUtc": "2021-12-29T15:18:17.7230869Z",
+      "ModifiedUtc": "2022-01-07T22:06:51.625565Z",
+      "Role": "ACCOUNTADMIN",
+      "Warehouse": "XT_MONITOR_WH",
+      "Database": "SNOWFLAKE",
+      "Schema": "ACCOUNT_USAGE",
+      "Query": "SELECT SUM(AVG_QUEUED_LOAD) AS Queued,\n  SUM(AVG_RUNNING) as Running\nfrom SNOWFLAKE.ACCOUNT_USAGE.WAREHOUSE_LOAD_HISTORY\nWHERE TO_DATE(START_TIME) >= DATEADD(month, -1, CURRENT_TIMESTAMP())\n  and WAREHOUSE_NAME = 'goldendeer_LOOKER';",
+      "Parameters": [],
+      "Charts": [],
+      "FileSystemSafeName": "Worksheet.deptdev.Queued vs Running Queries in t.ukHYVTKL0U.json",
+      "_CreatedWith": "Snowflake Snowsight Extensions",
+      "_CreatedVersion": "2021.12.2.0",
+      "AccountName": "deptdev",
+      "AccountFullName": "deptdev.ca-central-1.aws",
+      "AccountUrl": "https://deptdev.ca-central-1.aws.snowflakecomputing.com",
+      "OrganizationID": "255778455495",
+      "Region": "ca-central-1.aws"
+    },
+    {
+      "FolderID": "Qoer2md1",
+      "FolderName": "goldendeer Query Performance",
+      "OwnerUserID": "76729752305",
+      "OwnerUserName": "marcelb",
+      "Version": 3,
+      "URL": "/ca-central-1.aws/deptdev/w2Z1rr7arwJc#query",
+      "WorksheetID": "2Z1rr7arwJc",
+      "WorksheetName": "Bytes Spilled vs Scanned in the Last Month",
+      "StartedUtc": "2021-12-29T15:23:06.8688355Z",
+      "EndedUtc": "2021-12-29T15:23:23.1569991Z",
+      "ModifiedUtc": "2022-01-07T22:06:51.625565Z",
+      "Role": "ACCOUNTADMIN",
+      "Warehouse": "XT_MONITOR_WH",
+      "Database": "SNOWFLAKE",
+      "Schema": "ACCOUNT_USAGE",
+      "Query": "SELECT SUM(BYTES_SPILLED_TO_REMOTE_STORAGE) as Bytes_Spilled_to_Remote,\n  SUM(BYTES_SCANNED) as Bytes_Scanned\nfrom SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY\nWHERE TO_DATE(START_TIME) >= DATEADD(month, -1, TO_DATE(CURRENT_TIMESTAMP()))\n  and ERROR_CODE is NULL\n  and BYTES_SCANNED > 0\n  and DATABASE_NAME = 'goldendeer_DB'\n  and USER_NAME = 'goldendeer_LOOKER_USER'\n  and WAREHOUSE_NAME = 'goldendeer_LOOKER';\n",
+      "Parameters": [],
+      "Charts": [],
+      "FileSystemSafeName": "Worksheet.deptdev.Bytes Spilled vs Scanned in th.2Z1rr7arwJc.json",
+      "_CreatedWith": "Snowflake Snowsight Extensions",
+      "_CreatedVersion": "2021.12.2.0",
+      "AccountName": "deptdev",
+      "AccountFullName": "deptdev.ca-central-1.aws",
+      "AccountUrl": "https://deptdev.ca-central-1.aws.snowflakecomputing.com",
+      "OrganizationID": "255778455495",
+      "Region": "ca-central-1.aws"
+    },
+    {
+      "FolderID": "Qoer2md1",
+      "FolderName": "goldendeer Query Performance",
+      "OwnerUserID": "76729752305",
+      "OwnerUserName": "marcelb",
+      "Version": 4,
+      "URL": "/ca-central-1.aws/deptdev/wNWD48FIskC#query",
+      "WorksheetID": "NWD48FIskC",
+      "WorksheetName": "Top 10 Longest Running Queries in the Last Month",
+      "StartedUtc": "2021-12-29T14:48:48.1689238Z",
+      "EndedUtc": "2021-12-29T14:49:56.7224249Z",
+      "ModifiedUtc": "2022-01-07T22:06:51.625565Z",
+      "Role": "ACCOUNTADMIN",
+      "Warehouse": "XT_MONITOR_WH",
+      "Database": "SNOWFLAKE",
+      "Schema": "ACCOUNT_USAGE",
+      "Query": "select QUERY_TEXT,\n  TOTAL_ELAPSED_TIME / 1000 AS ELAPSED_TIME_SECONDS,\n  PARTITIONS_SCANNED || ' / ' || PARTITIONS_TOTAL AS PARTITIONS_SCANNED_PER_TOTAL\nfrom SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY\nwhere TO_DATE(START_TIME) > DATEADD(month, -1, TO_DATE(CURRENT_TIMESTAMP())) \n  and TOTAL_ELAPSED_TIME > 0\n  and ERROR_CODE is NULL\n  and PARTITIONS_SCANNED is not null\n  and DATABASE_NAME = 'goldendeer_DB'\n  and USER_NAME = 'goldendeer_LOOKER_USER'\n  and QUERY_TEXT like '%-- Looker Query Context%'\norder by TOTAL_ELAPSED_TIME desc\nLIMIT 10;\n",
+      "Parameters": [],
+      "Charts": [],
+      "FileSystemSafeName": "Worksheet.deptdev.Top 10 Longest Running Queries.NWD48FIskC.json",
+      "_CreatedWith": "Snowflake Snowsight Extensions",
+      "_CreatedVersion": "2021.12.2.0",
+      "AccountName": "deptdev",
+      "AccountFullName": "deptdev.ca-central-1.aws",
+      "AccountUrl": "https://deptdev.ca-central-1.aws.snowflakecomputing.com",
+      "OrganizationID": "255778455495",
+      "Region": "ca-central-1.aws"
+    },
+    {
+      "FolderID": "Qoer2md1",
+      "FolderName": "goldendeer Query Performance",
+      "OwnerUserID": "76729752305",
+      "OwnerUserName": "marcelb",
+      "Version": 10,
+      "URL": "/ca-central-1.aws/deptdev/w59jGwBlM59d#query",
+      "WorksheetID": "59jGwBlM59d",
+      "WorksheetName": "Top 10 Most Frequently Executed Queries in the Last Month",
+      "StartedUtc": "2022-01-05T18:58:40.0095885Z",
+      "EndedUtc": "2022-01-05T18:58:51.6682965Z",
+      "ModifiedUtc": "2022-01-07T22:06:51.625565Z",
+      "Role": "ACCOUNTADMIN",
+      "Warehouse": "XT_MONITOR_WH",
+      "Database": "SNOWFLAKE",
+      "Schema": "ACCOUNT_USAGE",
+      "Query": "SELECT left(QUERY_TEXT, position('-- Looker Query Context' in QUERY_TEXT)) as QUERY_TEXT_CUT,\n  sum(TOTAL_ELAPSED_TIME) / 1000 as TOTAL_TIME_SECONDS,\n  count(*) as NUMBER_OF_CALLS\nfrom SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY\nwhere TO_DATE(START_TIME) > DATEADD(month, -1, TO_DATE(CURRENT_TIMESTAMP())) \n  and TOTAL_ELAPSED_TIME > 0\n  and ERROR_CODE is NULL\n  and DATABASE_NAME = 'goldendeer_DB'\n  and USER_NAME = 'goldendeer_LOOKER_USER'\n  and QUERY_TEXT like '%-- Looker Query Context%'\ngroup by QUERY_TEXT_CUT\nhaving count(*) >= 1\norder by count(*) desc, sum(TOTAL_ELAPSED_TIME) desc\nlimit 10;\n",
+      "Parameters": [],
+      "Charts": [],
+      "FileSystemSafeName": "Worksheet.deptdev.Top 10 Most Frequently Execute.59jGwBlM59d.json",
+      "_CreatedWith": "Snowflake Snowsight Extensions",
+      "_CreatedVersion": "2021.12.2.0",
+      "AccountName": "deptdev",
+      "AccountFullName": "deptdev.ca-central-1.aws",
+      "AccountUrl": "https://deptdev.ca-central-1.aws.snowflakecomputing.com",
+      "OrganizationID": "255778455495",
+      "Region": "ca-central-1.aws"
+    },
+    {
+      "FolderID": "Qoer2md1",
+      "FolderName": "goldendeer Query Performance",
+      "OwnerUserID": "76729752305",
+      "OwnerUserName": "marcelb",
+      "Version": 5,
+      "URL": "/ca-central-1.aws/deptdev/w2tT458covO#query",
+      "WorksheetID": "2tT458covO",
+      "WorksheetName": "Top 10 Queries with Compilation Errors in the Last Month",
+      "StartedUtc": "2021-12-29T17:12:34.9232847Z",
+      "EndedUtc": "2021-12-29T17:12:45.1246893Z",
+      "ModifiedUtc": "2022-01-07T22:06:51.625565Z",
+      "Role": "ACCOUNTADMIN",
+      "Warehouse": "XT_MONITOR_WH",
+      "Database": "SNOWFLAKE",
+      "Schema": "ACCOUNT_USAGE",
+      "Query": "SELECT QUERY_TEXT, ERROR_MESSAGE,\n  count(*) as NUMBER_OF_CALLS\nfrom SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY\nwhere TO_DATE(START_TIME) > DATEADD(month, -1, TO_DATE(CURRENT_TIMESTAMP())) \n  and ERROR_CODE iS NOT NULL\n  and DATABASE_NAME = 'goldendeer_DB'\n  and USER_NAME = 'goldendeer_LOOKER_USER'\n  and ERROR_MESSAGE like 'SQL compilation error%'\ngroup by QUERY_TEXT, ERROR_MESSAGE\nhaving count(*) >= 1\norder by count(*) desc\nlimit 10;\n",
+      "Parameters": [],
+      "Charts": [],
+      "FileSystemSafeName": "Worksheet.deptdev.Top 10 Queries with Compilatio.2tT458covO.json",
+      "_CreatedWith": "Snowflake Snowsight Extensions",
+      "_CreatedVersion": "2021.12.2.0",
+      "AccountName": "deptdev",
+      "AccountFullName": "deptdev.ca-central-1.aws",
+      "AccountUrl": "https://deptdev.ca-central-1.aws.snowflakecomputing.com",
+      "OrganizationID": "255778455495",
+      "Region": "ca-central-1.aws"
+    },
+    {
+      "FolderID": "Qoer2md1",
+      "FolderName": "goldendeer Query Performance",
+      "OwnerUserID": "76729752305",
+      "OwnerUserName": "marcelb",
+      "Version": 2,
+      "URL": "/ca-central-1.aws/deptdev/wQMKjrMRMTR#query",
+      "WorksheetID": "QMKjrMRMTR",
+      "WorksheetName": "Top 10 Queries with Runtime Errors in the Last Month",
+      "StartedUtc": "2021-12-29T17:11:26.3706724Z",
+      "EndedUtc": "2021-12-29T17:11:38.541114Z",
+      "ModifiedUtc": "2022-01-07T22:06:51.625565Z",
+      "Role": "ACCOUNTADMIN",
+      "Warehouse": "XT_MONITOR_WH",
+      "Database": "SNOWFLAKE",
+      "Schema": "ACCOUNT_USAGE",
+      "Query": "SELECT QUERY_TEXT, ERROR_MESSAGE,\n  count(*) as NUMBER_OF_CALLS\nfrom SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY\nwhere TO_DATE(START_TIME) > DATEADD(month, -1, TO_DATE(CURRENT_TIMESTAMP())) \n  and ERROR_CODE iS NOT NULL\n  and DATABASE_NAME = 'goldendeer_DB'\n  and USER_NAME = 'goldendeer_LOOKER_USER'\n  and ERROR_MESSAGE not like 'SQL compilation error%'\ngroup by QUERY_TEXT, ERROR_MESSAGE\nhaving count(*) >= 1\norder by count(*) desc\nlimit 10;\n",
+      "Parameters": [],
+      "Charts": [],
+      "FileSystemSafeName": "Worksheet.deptdev.Top 10 Queries with Runtime Er.QMKjrMRMTR.json",
+      "_CreatedWith": "Snowflake Snowsight Extensions",
+      "_CreatedVersion": "2021.12.2.0",
+      "AccountName": "deptdev",
+      "AccountFullName": "deptdev.ca-central-1.aws",
+      "AccountUrl": "https://deptdev.ca-central-1.aws.snowflakecomputing.com",
+      "OrganizationID": "255778455495",
+      "Region": "ca-central-1.aws"
+    },
+    {
+      "FolderID": "Qoer2md1",
+      "FolderName": "goldendeer Query Performance",
+      "OwnerUserID": "76729752305",
+      "OwnerUserName": "marcelb",
+      "Version": 4,
+      "URL": "/ca-central-1.aws/deptdev/w4BjnajTNjry#query",
+      "WorksheetID": "4BjnajTNjry",
+      "WorksheetName": "Top 10 Queries with the Most Data Scanned in the Last Month",
+      "StartedUtc": "2021-12-29T14:48:48.1039319Z",
+      "EndedUtc": "2021-12-29T14:49:57.0783013Z",
+      "ModifiedUtc": "2022-01-07T22:06:51.625565Z",
+      "Role": "ACCOUNTADMIN",
+      "Warehouse": "XT_MONITOR_WH",
+      "Database": "SNOWFLAKE",
+      "Schema": "ACCOUNT_USAGE",
+      "Query": "select QUERY_TEXT,\n  BYTES_SCANNED AS TOTAL_BYTES_SCANNED,\n  PARTITIONS_SCANNED || ' / ' || PARTITIONS_TOTAL\n    AS PARTITIONS_SCANNED_PER_TOTAL\nfrom SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY\nwhere TO_DATE(START_TIME) > DATEADD(month, -1, TO_DATE(CURRENT_TIMESTAMP())) \n  and TOTAL_ELAPSED_TIME > 0\n  and ERROR_CODE is NULL\n  and BYTES_SCANNED > 0\n  and PARTITIONS_SCANNED is not null\n  and DATABASE_NAME = 'goldendeer_DB'\n  and USER_NAME = 'goldendeer_LOOKER_USER'\n  and QUERY_TEXT like '%-- Looker Query Context%'\norder by BYTES_SCANNED desc\nLIMIT 10;\n",
+      "Parameters": [],
+      "Charts": [],
+      "FileSystemSafeName": "Worksheet.deptdev.Top 10 Queries with the Most D.4BjnajTNjry.json",
+      "_CreatedWith": "Snowflake Snowsight Extensions",
+      "_CreatedVersion": "2021.12.2.0",
+      "AccountName": "deptdev",
+      "AccountFullName": "deptdev.ca-central-1.aws",
+      "AccountUrl": "https://deptdev.ca-central-1.aws.snowflakecomputing.com",
+      "OrganizationID": "255778455495",
+      "Region": "ca-central-1.aws"
+    },
+    {
+      "FolderID": "Qoer2md1",
+      "FolderName": "goldendeer Query Performance",
+      "OwnerUserID": "76729752305",
+      "OwnerUserName": "marcelb",
+      "Version": 4,
+      "URL": "/ca-central-1.aws/deptdev/w48dWaHy34a0#query",
+      "WorksheetID": "48dWaHy34a0",
+      "WorksheetName": "Number of Queries by Execution Time Buckets in the Last Month",
+      "StartedUtc": "2021-12-29T14:48:48.0702989Z",
+      "EndedUtc": "2021-12-29T14:49:57.1324748Z",
+      "ModifiedUtc": "2022-01-07T22:06:51.625565Z",
+      "Role": "ACCOUNTADMIN",
+      "Warehouse": "XT_MONITOR_WH",
+      "Database": "SNOWFLAKE",
+      "Schema": "ACCOUNT_USAGE",
+      "Query": "with buckets as (\n  SELECT '(a) 0-1 sec' as bucket, 0 as low, 1000 as up\n  UNION ALL\n  SELECT '(b) 1-5 secs' as bucket, 1000 as low, 5000 as up\n  UNION ALL\n  SELECT '(c) 5-10 secs' as bucket, 5000 as low, 10000 as up\n  UNION ALL\n  SELECT '(d) 10-20 secs' as bucket, 10000 as low, 20000 as up\n  UNION ALL\n  SELECT '(e) 20-30 secs' as bucket, 20000 as low, 30000 as up\n  UNION ALL\n  SELECT '(f) 30-60 secs' as bucket, 30000 as low, 60000 as up\n  UNION ALL\n  SELECT '(g) 1-2 mins' as bucket, 60000 as low, 120000 as up\n  UNION ALL\n  SELECT '(h) 2+ mins' as bucket, 120000 as low, NULL as up)\n \nSELECT COALESCE(bucket, '(h) 2+ mins'),\n  count(Query_ID) as NUMBER_OF_QUERIES\nfrom SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY\nFULL OUTER JOIN buckets b\n  ON TOTAL_ELAPSED_TIME >= b.low and TOTAL_ELAPSED_TIME < b.up\nwhere (QUERY_ID is null\n  OR (TO_DATE(START_TIME) >= DATEADD(month, -1, TO_DATE(CURRENT_TIMESTAMP()))\n  and TOTAL_ELAPSED_TIME > 0))\n  and ERROR_CODE iS NULL\n  and DATABASE_NAME = 'goldendeer_DB'\n  and USER_NAME = 'goldendeer_LOOKER_USER'\n  and QUERY_TEXT like '%-- Looker Query Context%'\ngroup by 1, COALESCE(b.low, 120000);\n",
+      "Parameters": [],
+      "Charts": [
+        {
+          "Version": 4,
+          "URL": null,
+          "WorksheetID": "48dWaHy34a0",
+          "WorksheetName": "Number of Queries by Execution Time Buckets in the Last Month",
+          "ChartID": "20362",
+          "ChartName": "/chart",
+          "ModifiedUtc": "2021-12-29T14:48:48.0710429Z",
+          "Configuration": {
+            "id": {
+              "ProjectId": "48dWaHy34a0",
+              "FileId": "20362"
+            },
+            "modified": "2021-12-29T14:48:48.071042912Z",
+            "type": "bar",
+            "source": "",
+            "sheet": null,
+            "steps": null,
+            "version": 4,
+            "primary": [
+              {
+                "bucket": "",
+                "domain": [
+                  "auto",
+                  "auto"
+                ],
+                "key": "COALESCE(BUCKET, '(H) 2+ MINS')",
+                "numTicks": "auto"
+              }
+            ],
+            "secondary": {
+              "cols": [
+                {
+                  "key": "NUMBER_OF_QUERIES"
+                }
+              ],
+              "domain": [
+                "auto",
+                "auto"
+              ],
+              "numTicks": "auto"
+            },
+            "lineStyle": {
+              "fill": true,
+              "trimYAxis": false
+            },
+            "barStyle": {
+              "stretch": false,
+              "order": "label",
+              "orderDirection": "asc"
+            },
+            "tableStyle": {
+              "colorCells": false
+            },
+            "showLegend": true
+          },
+          "FileSystemSafeName": "Chart.deptdev.Number of Queries by Execution.48dWaHy34a0.-chart.20362.json",
+          "_CreatedWith": "Snowflake Snowsight Extensions",
+          "_CreatedVersion": "2021.12.2.0",
+          "AccountName": "deptdev",
+          "AccountFullName": "deptdev.ca-central-1.aws",
+          "AccountUrl": "https://deptdev.ca-central-1.aws.snowflakecomputing.com",
+          "OrganizationID": "255778455495",
+          "Region": "ca-central-1.aws"
+        }
+      ],
+      "FileSystemSafeName": "Worksheet.deptdev.Number of Queries by Execution.48dWaHy34a0.json",
+      "_CreatedWith": "Snowflake Snowsight Extensions",
+      "_CreatedVersion": "2021.12.2.0",
+      "AccountName": "deptdev",
+      "AccountFullName": "deptdev.ca-central-1.aws",
+      "AccountUrl": "https://deptdev.ca-central-1.aws.snowflakecomputing.com",
+      "OrganizationID": "255778455495",
+      "Region": "ca-central-1.aws"
+    }
+  ],
+  "FileSystemSafeName": "Dashboard.deptdev.goldendeer Query Performance.Qoer2md1.json",
+  "_CreatedWith": "Snowflake Snowsight Extensions",
+  "_CreatedVersion": "2021.12.2.0",
+  "AccountName": "deptdev",
+  "AccountFullName": "deptdev.ca-central-1.aws",
+  "AccountUrl": "https://deptdev.ca-central-1.aws.snowflakecomputing.com",
+  "OrganizationID": "255778455495",
+  "Region": "ca-central-1.aws"
+}

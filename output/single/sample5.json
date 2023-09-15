@@ -1,0 +1,82 @@
+{
+   "OwnerUserID (1)": "string (1): 76729752305", 
+   "OwnerUserName (1)": "string (1): marcelb", 
+   "URL (1)": "string (1): /ca-central-1.aws/de...", 
+   "DashboardID (1)": "string (1): Qoer2md1", 
+   "DashboardName (1)": "string (1): goldendeer Query Per...", 
+   "RefreshedUtc (1)": "string (1): 2021-12-29T14:49:57....", 
+   "ViewedUtc (1)": "string (1): 0001-01-01T00:00:00", 
+   "ModifiedUtc (1)": "string (1): 2022-01-07T22:06:51....", 
+   "Role (1)": "string (1): ACCOUNTADMIN", 
+   "Warehouse (1)": "string (1): XT_MONITOR_WH", 
+   "Database (1)": "string (1): ", 
+   "Schema (1)": "string (1): ", 
+   "Contents (1)": 
+   {
+      "rows (1)": 
+      [
+         {
+            "height (7)": "number (2): 0, 2", 
+            "cells (7)": 
+            [
+               {
+                  "type (2)": "string (1): query", 
+                  "pid (2)": "string (2): ukHYVTKL0U, 2Z1rr7arwJc", 
+                  "version (2)": "number (1): 0", 
+                  "refreshing (2)": "bool (1): False", 
+                  "displayMode (2)": "string (1): table"
+               }
+            ]
+         }
+      ],
+      "manualRefresh (1)": "bool (1): False", 
+      "context (1)": 
+      {
+         "role (1)": "string (1): ", 
+         "warehouse (1)": "string (1): ", 
+         "database (1)": "string (1): ", 
+         "schema (1)": "string (1): "
+      }
+   },
+   "NumRows (1)": "number (1): 7", 
+   "NumWidgets (1)": "number (1): 8", 
+   "Worksheets (1)": 
+   [
+      {
+         "FolderID (8)": "string (1): Qoer2md1", 
+         "FolderName (8)": "string (1): goldendeer Query Per...", 
+         "OwnerUserID (8)": "string (1): 76729752305", 
+         "OwnerUserName (8)": "string (1): marcelb", 
+         "Version (8)": "number (5): 3, 4, 10, ...", 
+         "URL (8)": "string (8): /ca-central-1.aws/de..., /ca-central-1.aws/de..., /ca-central-1.aws/de..., ...", 
+         "WorksheetID (8)": "string (8): ukHYVTKL0U, 2Z1rr7arwJc, NWD48FIskC, ...", 
+         "WorksheetName (8)": "string (8): Queued vs Running Qu..., Bytes Spilled vs Sca..., Top 10 Longest Runni..., ...", 
+         "StartedUtc (8)": "string (8): 2021-12-29T15:18:17...., 2021-12-29T15:23:06...., 2021-12-29T14:48:48...., ...", 
+         "EndedUtc (8)": "string (8): 2021-12-29T15:18:17...., 2021-12-29T15:23:23...., 2021-12-29T14:49:56...., ...", 
+         "ModifiedUtc (8)": "string (1): 2022-01-07T22:06:51....", 
+         "Role (8)": "string (1): ACCOUNTADMIN", 
+         "Warehouse (8)": "string (1): XT_MONITOR_WH", 
+         "Database (8)": "string (1): SNOWFLAKE", 
+         "Schema (8)": "string (1): ACCOUNT_USAGE", 
+         "Query (8)": "string (8): SELECT SUM(AVG_QUEUE..., SELECT SUM(BYTES_SPI..., select QUERY_TEXT,  ..., ...", 
+         "Parameters (8)": [ ],
+         "Charts (8)": [ ],
+         "FileSystemSafeName (8)": "string (8): Worksheet.deptdev.Qu..., Worksheet.deptdev.By..., Worksheet.deptdev.To..., ...", 
+         "_CreatedWith (8)": "string (1): Snowflake Snowsight ...", 
+         "_CreatedVersion (8)": "string (1): 2021.12.2.0", 
+         "AccountName (8)": "string (1): deptdev", 
+         "AccountFullName (8)": "string (1): deptdev.ca-central-1...", 
+         "AccountUrl (8)": "string (1): https://deptdev.ca-c...", 
+         "OrganizationID (8)": "string (1): 255778455495", 
+         "Region (8)": "string (1): ca-central-1.aws"
+      }
+   ],
+   "FileSystemSafeName (1)": "string (1): Dashboard.deptdev.go...", 
+   "_CreatedWith (1)": "string (1): Snowflake Snowsight ...", 
+   "_CreatedVersion (1)": "string (1): 2021.12.2.0", 
+   "AccountName (1)": "string (1): deptdev", 
+   "AccountFullName (1)": "string (1): deptdev.ca-central-1...", 
+   "AccountUrl (1)": "string (1): https://deptdev.ca-c...", 
+   "OrganizationID (1)": "string (1): 255778455495", 
+   "Region (1)": "string (1): ca-central-1.aws"
+}

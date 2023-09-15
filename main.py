@@ -49,8 +49,10 @@ class Val:
         for val in self.vals[0:max_values+1]:
             if i >= max_values: s += ", ..."
             else:
-                if isinstance(val, str) and len(str(val)) > str_truncate:
-                    val = f'{str(val)[:str_truncate]}...'
+                if isinstance(val, str):
+                    val = str(val).replace("\n", " ")
+                    if len(str(val)) > str_truncate:
+                        val = f'{str(val)[:str_truncate]}...'
                 s += f'{", " if len(s) > 0 else ""}{val}'
             i += 1
         return s
@@ -62,8 +64,11 @@ class Val:
             samples = "" if not show_samples else f': {self._dumpVals()}'
             return f'"{self.type}{counts}{samples}"{s}'
         else:
-            s = "" if lastVal else "\n"
-            return f'{s}{self.val.dump(last, lastVal)}'
+            v = self.val.dump(last, lastVal)
+            if lastVal or v.startswith("[ ]") or v.startswith("{ }"):
+                return v
+            else:
+                return f'\n{v}'
 
 class Prop:
     def __init__(self, key, val, level=0) -> None:
@@ -100,8 +105,11 @@ class Obj:
         return self.props[keys[0]].val.isPrimitive()
     
     def dump(self, last=True, lastVal=False):
+        comma = getComma(last)
         keys = list(self.props.keys())
-        if len(keys) > 0:
+        if len(keys) == 0:
+            return f'{{ }}{comma}'
+        else:
             prop = self.props[keys[0]]
             if lastVal:
                 return f'{{ {prop.dumpProp(last, lastVal)} }}'
@@ -110,7 +118,7 @@ class Obj:
 
         s = f'{getIndent(self.level)}{{\n'
         for key in self.props: s += self.props[key].dump(key is keys[-1])
-        s += f'{getIndent(self.level)}}}{getComma(last)}\n'
+        s += f'{getIndent(self.level)}}}{comma}\n'
         return s
 
 class Arr:
@@ -177,16 +185,19 @@ class Arr:
             and self.objs[0].hasSingleProp())
 
     def dump(self, last=True, lastVal=False):
-        if self.hasPrimitives():
-            return f'[ {self.objs[0].dump(True, True)} ]{getComma(last)}'
-        if self.hasSingleProp():
-            return f'[{self.objs[0].dump(True, True)}]{getComma(last)}'
+        comma = getComma(last)
+        if len(self.objs) == 0:
+            return f'[ ]{comma}'
+        elif self.hasPrimitives():
+            return f'[ {self.objs[0].dump(True, True)} ]{comma}'
+        elif self.hasSingleProp():
+            return f'[{self.objs[0].dump(True, True)}]{comma}'
 
         s = f'{getIndent(self.level)}[\n'
         for obj in self.objs:
             d = obj.dump(obj is self.objs[-1])
             s += d if not isinstance(obj, Val) else f'{getIndent(obj.level)}{d}\n'
-        s += f'{getIndent(self.level)}]{getComma(last)}'
+        s += f'{getIndent(self.level)}]{comma}'
         return s
 
 def process_file(filename, single):
