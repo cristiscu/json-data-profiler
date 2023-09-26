@@ -12,6 +12,7 @@ class Config:
     show_samples = True
     show_types = False
     show_json = False
+    show_line_numbers = True
 
     max_values = 3
     str_truncate = 20

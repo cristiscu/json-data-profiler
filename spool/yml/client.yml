@@ -1,0 +1,187 @@
+# Common Services Configuration - NRF and MySQL
+nsregistration:
+  configFiles:
+    nf.profile: |-
+      {
+        "plmn": {"mcc": "310", "mnc": "14"},
+        "ipv4Addresses": ["10.178.246.11"],
+        "priority": 1
+      }
+  nrf:
+    host: http://10.75.157.63
+    port: 31605
+
+svc:
+  mysqlPrimaryHost: 10.75.203.106
+  mysqlUsername: seppusr
+  mysqlPassword: sepppasswd
+
+ocsepp-client:
+  enabled: true 
+ocsepp-server:
+  enabled: false
+
+# Infrastrucutre Configuration - IP, Replica Count
+gateways:
+  sepp-ingressgateway:
+    # To provide, replica count disable auto-scaling.
+    autoscaleEnabled: false
+    replicaCount: 1
+    # To enable Metal LB, provide serviceAnnotations and loadBalancerIP
+    #serviceAnnotations:
+        #metallb.universe.tf/address-pool: signaling
+    #loadBalancerIP: 10.x.x.x
+    #type: LoadBalancer
+
+    ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 31380
+      name: http2
+    - port: 8443
+      targetPort: 8443
+      nodePort: 31390
+      name: https
+
+global:
+  # Infrastructure Configuration - Software Images
+  nsRegistration:
+    image: ocspf-registry.us.oracle.com:5000/ocsepp-nsregistration
+    tag: 1.2.0
+    pullPolicy: IfNotPresent
+  n32Client:
+    image: ocspf-registry.us.oracle.com:5000/ocsepp-client
+    tag: pk102
+    pullPolicy: IfNotPresent
+  n32Server:
+    image: ocspf-registry.us.oracle.com:5000/ocsepp-server
+    tag: pkfinal
+    pullPolicy: IfNotPresent
+  pilot:
+    image: ocspf-registry.us.oracle.com:5000/istio/pilot
+    tag: original
+    pullPolicy: IfNotPresent
+  proxy:
+    image: ocspf-registry.us.oracle.com:5000/ars/sepp-worker
+    tag: pk155
+    pullPolicy: IfNotPresent
+  sds:
+    image: ocspf-registry.us.oracle.com:5000/istio/node-agent-k8s
+    tag: original
+    pullPolicy: IfNotPresent
+  listeners:
+    httpPort: 8080
+    httpsPort: 8443
+  config:
+    localsepp:
+      domain: sepp.home.com
+      securityCapability: TLS
+      scp:
+        ip: 10.75.203.79
+        port: 30081
+      tls:
+        certificate: |-
+          -----BEGIN CERTIFICATE-----
+          MIIDyDCCArCgAwIBAgIJAJ/NlN2hRmiiMA0GCSqGSIb3DQEBCwUAMHkxCzAJBgNV
+          BAYTAlVTMQswCQYDVQQIDAJDQTELMAkGA1UEBwwCU1YxDTALBgNVBAoMBENHQlUx
+          DzANBgNVBAsMBk9yYWNsZTESMBAGA1UEAwwJbG9jYWxob3N0MRwwGgYJKoZIhvcN
+          AQkBFg14eXpAZ21haWwuY29tMB4XDTE5MDQwMTExMTQxNloXDTIwMDMzMTExMTQx
+          NloweTELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkNBMQswCQYDVQQHDAJTVjENMAsG
+          A1UECgwEQ0dCVTEPMA0GA1UECwwGT3JhY2xlMRIwEAYDVQQDDAlsb2NhbGhvc3Qx
+          HDAaBgkqhkiG9w0BCQEWDXh5ekBnbWFpbC5jb20wggEiMA0GCSqGSIb3DQEBAQUA
+          A4IBDwAwggEKAoIBAQC/zV8n5kOOKWLuqlZD1cf7KAtgSAH1MB8biR9mKAJ/sH1M
+          1/OR11FXrEs4Sq3yB+6HcNgwg/le3XAncGXbKRSI8MeuLftewwfj2q9q8QnIUftX
+          Dlyq92Zd675wpPzp4JjRewPgJFsSBMa8svZBZJzIDWLaIke90Bx9bJNzhs+aLijW
+          10rZVeO5bRzKaU8ze/7Py1IGc/HWhR+S+DRVInMwMui5ozqyZZaprVHjDititSoS
+          HcWphI0ef8e6w/mfe2AcUKNugI4GGfK+egJ3SXSe5BzJSx+EJgKQaSP3/DTGCSju
+          C33uSKch43IhX+zWL2FOQD0I/Y8YCIYHTA0GJevPAgMBAAGjUzBRMB0GA1UdDgQW
+          BBS5wMSwF048S+pa+onXF7t5LBw3EDAfBgNVHSMEGDAWgBS5wMSwF048S+pa+onX
+          F7t5LBw3EDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBQEG9o
+          IAIOwGkpbsqbFfFti9gSilaaP8rzSN8Thj7PvHxem6oc/Gj9ioyWcCAKk3t6gZgd
+          dtXo5SJp+DXFpNnzmmLkHFLbloZwc8QwPoIE4aqiYknBlKdvmXGZSaRYI8CEk8dK
+          uH5Dot5mJWGE391zAuRPqvJSl4rborTZGfk1Nl8KQPi4P2GnoFxZHzM8Pt6LYYJq
+          lOn7BgF8rGMoSwVB1+Znt2R5KaeMANE4WOW9qrqE2fd0Oq23cOBXckizCzc5HwDF
+          6Ny3JHxs/sf0ZX8teyXlHgv153O/KMaQijYcU1WCJ5ETAC/UbzkRgWUbcoDFFUSr
+          sRpvmOpp7/KKGh3c
+          -----END CERTIFICATE-----
+        privateKey: |-
+          -----BEGIN RSA PRIVATE KEY-----
+          MIIEogIBAAKCAQEAv81fJ+ZDjili7qpWQ9XH+ygLYEgB9TAfG4kfZigCf7B9TNfz
+          kddRV6xLOEqt8gfuh3DYMIP5Xt1wJ3Bl2ykUiPDHri37XsMH49qvavEJyFH7Vw5c
+          qvdmXeu+cKT86eCY0XsD4CRbEgTGvLL2QWScyA1i2iJHvdAcfWyTc4bPmi4o1tdK
+          2VXjuW0cymlPM3v+z8tSBnPx1oUfkvg0VSJzMDLouaM6smWWqa1R4w4rYrUqEh3F
+          qYSNHn/HusP5n3tgHFCjboCOBhnyvnoCd0l0nuQcyUsfhCYCkGkj9/w0xgko7gt9
+          7kinIeNyIV/s1i9hTkA9CP2PGAiGB0wNBiXrzwIDAQABAoIBABQHonRMO6nQ8J/z
+          8eZLoQK9f9KiMnIkgFsjyr+kVf53s94efzUvwzLgr0pFojywT1ydkDYg0h3yChBU
+          UI6+j4JtgqzR6HpQ67YD1GXanibpSNIikdLY2zvbrpuc3zydU9gsfI8fvNL45Lg4
+          CDd0Bltt6nDVO6C65v7CI/PglDWJhia2oz3HfR8ruDPw3EP8W+L7qtSVcKprVj82
+          v8LQC/SVhzwCAyA9RlpU/z6NHD5wqn3a4+f3fNnAzFWfVp8S8ZxYemiw7q0mowob
+          2ogf9eHuIMy2P20bqHcU4LeJlaGz1PkPiUtXuRPwRJNkA1FiR+2dm/35BofO/XpZ
+          m9UYoSECgYEA6q4PoHYHB/8yQv+2N2xFZmgW83fFAsfCojPteSxb7lUBf/9EEkbB
+          PuY30PCeyOceEBy+Iz7PbkxBzcwkdPos1qs82knGMOM7TCDFlVm1kJRWg/M+LBP9
+          c14mj3+PbazWQJTIo2fPzbJUSY29qBzyUWXtOaQIZ8pSxTVVc8lhTWsCgYEA0Tob
+          OufE8x5LVRdqOF0b97za50z9cAkS9d6hb9eJ+ApEkTe07DBgnhmDzup98WMEvPM6
+          Kd2jb0U9ACAo3Dudz1dDtfLHjdWd27QKInS2hw5xXceStMV55NOAFNQ0oF+dfJa8
+          aBua8m9b+BzQQAh6NSqytcHVak1aliDY5GUl8C0CgYBePOlfiSXHq022o9K7LMot
+          lkzpFcZSGH9q/Sk2SH7eFNqWWJ4wLKN7K51sVMOeb1ieJbygkJ9hblPaXUiihLeu
+          uHKmQYvJo+Xy6xIMqEqFtVuMfwgPUTOsuTkI1LN22jnrExQCsjQ7KIo6QyXOtVkF
+          IMYDKICLlS5prMIUzeA54wKBgHfBAWry05iv40Bd+Y8vQ93Fe6neOEVS/EY8WjyQ
+          qsiM3/gaYXS6r+JuCjJ5pwJtwX2A3e6ujGgYwjR7M8fyW34cnYXb4vo8pXDmGNLl
+          6L9eteaOX1sWmJEvuWSynTiZ4aM5B7ey7ToMISDfJRcxgvlBai58NnH0un+pZ1s6
+          xb81AoGAB7sIVYgdJXXCS1KMtYlhpxhOOOkvuJBe0YSfzYXb9kjktoKOK8xSqKGE
+          mLQsZzMWP5CubRY3PiJ7GhcV1RvEJsj5sR493Mk8ukEP/LTWlZMh7BR5YXr4tg2U
+          9gCKExnTlMkeDJNRuw43MslPxJiaXMds7BDgkCvcf3Av9OEvEvk=
+          -----END RSA PRIVATE KEY-----
+        minProtocolVersion: TLSV1_3
+        maxProtocolVersion: TLSV1_3
+        cipherSuites:
+          - "[ECDHE-ECDSA-AES128-GCM-SHA256|ECDHE-ECDSA-CHACHA20-POLY1305]"
+          - "[ECDHE-RSA-AES128-GCM-SHA256|ECDHE-RSA-CHACHA20-POLY1305]"
+          - ECDHE-ECDSA-AES128-SHA256
+          - ECDHE-RSA-AES128-SHA256
+          - ECDHE-ECDSA-AES128-SHA
+          - ECDHE-RSA-AES128-SHA
+          - AES128-GCM-SHA256
+          - AES128-SHA256
+          - AES128-SHA
+          - ECDHE-ECDSA-AES256-GCM-SHA384
+          - ECDHE-RSA-AES256-GCM-SHA384
+          - ECDHE-ECDSA-AES256-SHA384
+          - ECDHE-RSA-AES256-SHA384
+          - ECDHE-ECDSA-AES256-SHA
+          - ECDHE-RSA-AES256-SHA
+          - AES256-GCM-SHA384
+          - AES256-SHA256
+          - AES256-SHA
+    remotesepps:
+      - domain: sepp.visitor.com
+        caCertificate: |-
+          -----BEGIN CERTIFICATE-----
+          MIIDyjCCArKgAwIBAgIJANO6mMns+CWEMA0GCSqGSIb3DQEBCwUAMHoxCzAJBgNV
+          BAYTAklOMQswCQYDVQQIDAJLQTEMMAoGA1UEBwwDQkxSMQ8wDQYDVQQKDAZPcmFj
+          bGUxDTALBgNVBAsMBENHQlUxEjAQBgNVBAMMCWxvY2FsaG9zdDEcMBoGCSqGSIb3
+          DQEJARYNYWJjQGdtYWlsLmNvbTAeFw0xOTA0MDExMTExMTJaFw0yMDAzMzExMTEx
+          MTJaMHoxCzAJBgNVBAYTAklOMQswCQYDVQQIDAJLQTEMMAoGA1UEBwwDQkxSMQ8w
+          DQYDVQQKDAZPcmFjbGUxDTALBgNVBAsMBENHQlUxEjAQBgNVBAMMCWxvY2FsaG9z
+          dDEcMBoGCSqGSIb3DQEJARYNYWJjQGdtYWlsLmNvbTCCASIwDQYJKoZIhvcNAQEB
+          BQADggEPADCCAQoCggEBALau4TZylSvrxNtuk6ec65zv83gnd++Lioei3QDutU/J
+          vVyl0t51rkf1tyqmqjXhYetFwAAH3sNJ5etGKuq0N4opHZRsUaKhxVgPuZ+5bOzT
+          OD/iCW+CEsGPGyGN9agUJNp7TH0R3+lruGz+Z7u0M90rlEl/dJkWgMwzZ69O17pB
+          zML3fBQ+p5do7p5jzvMMLT7JzzVW+k+2+kEzuIMh0Yp1IpA/e9Qk9vI7uKYI7Uxy
+          UuaPTECZrDffe+eTVTkrXRt7v0JaUM6LptI7RgL6bnSpTGz0kwN0gO7fZCxGfPSv
+          7KpY7gOenZ4QtEhxg9dTNGEGEU4P7/ju2gAyWMfOjMkCAwEAAaNTMFEwHQYDVR0O
+          BBYEFNQn+TW2QBzOFi2XG/IF4EBe7kePMB8GA1UdIwQYMBaAFNQn+TW2QBzOFi2X
+          G/IF4EBe7kePMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBACgW
+          kXWYuwv9OA9nScdbInXubPFpOBDK+V7LA7AnnFElxQldcowzPQvzhSmBB3UBSxfK
+          JAsG4eIztVldYavECKDzk9pP1/pYtGA1SRhw2wocqKtORlZoerx7ZcVo8ogtlJIj
+          +4K0AIerxREalobAkZb/vambw+Hmj6YTKFG69GTtTAJVK3A33f9xnbCP0mplYvsq
+          qitUXmon713P/Zcadwz/kGfwUGzzAFO8VZcKHGS8mxaRKSHlwZMETpE2Zlj9LZDc
+          +uWKg29PssujJ17T0IGNxn0C6sH2R2IEPAq4xWYwf0vkHO4SfoacpDJgfCXZMEE3
+          wlMx41TEYSgcSqCcp8s=
+          -----END CERTIFICATE-----
+        n32c:
+          ip: 10.75.203.74
+          port: 31390
+        n32f:
+          ip: 10.75.203.74
+          port: 31390

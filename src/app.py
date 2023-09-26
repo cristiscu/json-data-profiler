@@ -4,7 +4,7 @@ Creation Date: Sep 2023
 Company:       XtractPro Software
 """
 
-import json, yaml, xmltodict
+import json, yaml, xmltodict, urllib.parse
 from io import StringIO
 import streamlit as st
 
@@ -16,12 +16,16 @@ def loadFile():
     if 'filename' not in st.session_state \
         or st.session_state.filename != uploaded_file.name:
         bytes = uploaded_file.getvalue()
-        text = StringIO(bytes.decode("utf-8")).read()
+        raw = StringIO(bytes.decode("utf-8")).read()
 
-        if uploaded_file.name.lower().endswith("yml"):
-            text = json.dumps(yaml.safe_load(text), indent=3)
-        elif uploaded_file.name.lower().endswith("xml"):
-            text = json.dumps(xmltodict.parse(text), indent=3)
+        filename = uploaded_file.name.lower()
+        filetype = "json"
+        if filename.endswith(".yml") or filename.endswith(".yaml"):
+            text = json.dumps(yaml.safe_load(raw), indent=3)
+            filetype = "yaml"
+        elif filename.endswith(".xml"):
+            text = json.dumps(xmltodict.parse(raw), indent=3)
+            filetype = "xmlDoc"
 
         data = json.loads(text)
         if not isinstance(data, dict) and not isinstance(data, list):
@@ -29,42 +33,60 @@ def loadFile():
             st.stop()
         
         st.session_state['filename'] = uploaded_file.name
+        st.session_state['filetype'] = filetype
+        st.session_state["raw"] = raw
         st.session_state["text"] = text
         st.session_state["data"] = data
 
+    filetype = st.session_state.filetype
+    raw = st.session_state.raw
     text = st.session_state.text
     data = st.session_state.data
-    return text, data
+    return raw, text, data
 
-def renderFile(text, data, theme):
-    tabSource, tabSchema, tabERD, tabDOT = st.tabs(
-        ["Uploaded Source File", "Inferred Schema", "Inferred Object Model", "DOT Script"])
+def renderFile(raw, text, data, theme):
+    map = { "xmlDoc": "XML", "yaml": "YAML", "json": "JSON" }
+    tabRowName = f"Raw {map[st.session_state.filetype]} Source File"
+    tabRaw, tabSource, tabSchema, tabERD, tabDOT = st.tabs(
+        [tabRowName, "Formatted Source File", "Inferred Schema", "Inferred Object Model", "Generated Script"])
 
     objects = JsonManager.inferSchema(data)
     schema = objects.dump()
     ERDManager.getEntities(objects)
     chart = ERDManager.createGraph(theme)
 
+    with tabRaw:
+        st.caption("This is your raw uploaded file. Switch to the other tabs to see the inferred schema.")
+        st.code(raw, language=st.session_state.filetype, line_numbers=Config.show_line_numbers)
+
     with tabSource:
-        st.write("This is your uploaded file. Switch to the other tabs to see the inferred schema.")
-        if not Config.show_json: st.code(text, language="json")
-        else: st.json(text, expanded=True)
+        st.caption("This is your eventually converted and formatted source file, in JSON.")
+        if not Config.show_json:
+            st.code(text, language="json", line_numbers=Config.show_line_numbers)
+        else:
+            st.json(text, expanded=True)
 
     with tabSchema:
-        st.write("Here are the inferred object types for the uploaded file.");
-        if not Config.show_json: st.code(schema, language="json")
-        else: st.json(schema, expanded=True)
+        st.caption("Here are the inferred object types for the uploaded file, in JSON.");
+        if not Config.show_json:
+            st.code(schema, language="json", line_numbers=Config.show_line_numbers)
+        else:
+            st.json(schema, expanded=True)
 
     with tabERD:
-        st.write("This is your infered object model.")
+        st.caption("This is your infered object model, with GraphViz.")
         st.graphviz_chart(chart, use_container_width=True)
 
     with tabDOT:
-        st.code(chart, language="dot")
+        st.caption("This is the DOT script generated for your previous GraphViz infered object model.")
+        link = f'http://magjac.com/graphviz-visual-editor/?dot={urllib.parse.quote(chart)}'
+        st.link_button("Test this online!", link)
+        st.code(chart, language="dot", line_numbers=Config.show_line_numbers)
 
 
 st.set_page_config(layout="wide")
 st.title("JSON Data Profiler")
+st.caption("Upload a JSON, YAML or XML data file, and get its inferred schema and a Entity-Relationship diagram.")
 
 uploaded_file = st.sidebar.file_uploader(
     "Upload a JSON/XML/YML file", accept_multiple_files=False)
@@ -84,6 +106,9 @@ Config.show_samples = st.sidebar.checkbox("Show Samples",
 Config.show_types = st.sidebar.checkbox("Show Data Types",
     value=Config.show_types,
     help="Show data types in the ER diagrams")
+Config.show_line_numbers = st.sidebar.checkbox("Show Line Numbers",
+    value=Config.show_line_numbers,
+    help="Show line numbers when displaying raw JSON, XML, YAML or DOT code")
 Config.show_json = st.sidebar.checkbox("Show JSON Viewer",
     value=Config.show_json,
     help="Show advanced JSON viewer or simple JSON code")
@@ -104,6 +129,6 @@ theme = st.sidebar.selectbox('Theme:', tuple(themes.keys()), index=0,
 if uploaded_file is None:
     st.write("Click on the 'Browse files' button on the sidebar to load a file.")
 else:
-    text, data = loadFile()
-    renderFile(text, data, themes[theme])
+    raw, text, data = loadFile()
+    renderFile(raw, text, data, themes[theme])
 
