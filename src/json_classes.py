@@ -4,26 +4,23 @@ Creation Date: Sep 2023
 Company:       XtractPro Software
 """
 
+from config import Config
+
 # ==========================================================================
 class JsonManager:
-    single_object = False
-    show_counts = True
-    show_samples = True
-    str_truncate = 20
-    max_values = 3
     obj_id = 1
 
     def __new__(cls):
         raise TypeError("This is a static class and cannot be instantiated.")
 
     @classmethod
-    def getTop(cls, data, single_object) -> str:     
-        cls.single_object = single_object
+    def inferSchema(cls, data) -> str:     
         cls.obj_id = 1
         return Obj(data) if isinstance(data, dict) else Arr(data)
 
     @classmethod
     def getComma(cls, last) -> str: return "" if last else ","
+
     @classmethod
     def getIndent(cls, level) -> str: return "   " * level
 
@@ -40,11 +37,15 @@ class Val:
         elif isinstance(val, (int, float)):
             self.type = "number"
         elif isinstance(val, list):
-            self.type = "array"; self.val = Arr(val, level)
+            self.type = "array"
+            self.val = Arr(val, level)
         elif isinstance(val, dict):
-            self.type = "object"; self.val = Obj(val, level)
+            self.type = "object"
+            self.val = Obj(val, level)
         else:
-            self.type = "string"; v = str(self.val).replace('"', '\\"'); self.val = f'"{v}"'
+            self.type = "string"
+            v = str(self.val).replace('"', '\\"')
+            self.val = f'"{v}"'
 
         self.vals = []
         self.addValue(val)
@@ -63,13 +64,13 @@ class Val:
 
     def _dumpVals(self):
         s = ''; i = 0
-        for val in self.vals[0:JsonManager.max_values+1]:
-            if i >= JsonManager.max_values: s += ", ..."
+        for val in self.vals[0:Config.max_values+1]:
+            if i >= Config.max_values: s += ", ..."
             else:
                 if isinstance(val, str):
                     val = str(val).replace("\n", " ")
-                    if len(str(val)) > JsonManager.str_truncate:
-                        val = f'{str(val)[:JsonManager.str_truncate]}...'
+                    if len(str(val)) > Config.str_truncate:
+                        val = f'{str(val)[:Config.str_truncate]}...'
                 s += f'{", " if len(s) > 0 else ""}{val}'
             i += 1
         return s
@@ -77,8 +78,8 @@ class Val:
     def dump(self, last=True, lastVal=False):
         if self.isPrimitive():
             s = "" if last else ", "
-            counts = "" if not JsonManager.show_counts else f' ({len(self.vals)})'
-            samples = "" if not JsonManager.show_samples else f': {self._dumpVals()}'
+            counts = "" if not Config.show_counts else f' ({len(self.vals)})'
+            samples = "" if not Config.show_samples else f': {self._dumpVals()}'
             return f'"{self.type}{counts}{samples}"{s}'
         else:
             v = self.val.dump(last, lastVal)
@@ -98,7 +99,7 @@ class Prop:
 
     def getName(self):
         req = "" if self.req else "*"
-        counts = "" if not JsonManager.show_counts else f' ({self.count})'
+        counts = "" if not Config.show_counts else f' ({self.count})'
         return f'"{self.key}{req}{counts}"'
 
     def dumpProp(self, last=True, lastVal=False):
@@ -159,7 +160,7 @@ class Arr:
                 self._processArrObj(elem, level)
 
     def _processArrObj(self, elem, level):
-        if JsonManager.single_object:
+        if Config.single_object:
             self._updateObject(elem, level)
         else:
             inst = self._hasSameKeys(elem)

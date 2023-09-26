@@ -1,0 +1,119 @@
+# =================================================================
+# Licensed Materials - Property of IBM
+#
+# (c) Copyright IBM Corp. 2015 All Rights Reserved
+#
+# US Government Users Restricted Rights - Use, duplication or
+# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+# =================================================================
+
+# =================================================================
+# Cloud Information
+# =================================================================
+cloud:
+  # Cloud Name: The cloud name must not contain spaces or special
+  # characters. The name is used for the OpenStack region name.
+  name: YOUR_CLOUD_NAME
+  # Cloud Description
+  description: HA Controller + N Compute Topology - x86 KVM
+  # Cloud Administrator (admin) User's Password
+  password: YOUR_CLOUD_PASSWORD
+  # Cloud Database Service Type: db2
+  database_service_type: db2
+  # Cloud Messaging Service Type: rabbitmq
+  messaging_service_type: rabbitmq
+  # (Optional) Cloud SSL certificate chain file used only when the
+# fips_compliance cloud feature is enabled. This value is not required.
+# If not specified, the cacert_file will be created automatically,
+# and placed on the Chef server. Only specify this value if the
+# fips_compliance cloud feature is enabled, and you are providing your
+# own cloud SSL certificate chain file, and controller SSL certificate
+# and private key files for FIPS compliance.
+# cacert_file: YOUR_CLOUD_CACERT_FILE_LOCATION
+  # Cloud Features: The cloud features to be enabled or disabled.
+  features:
+    self_service_portal: enabled
+    platform_resource_scheduler: disabled
+    fips_compliance: disabled
+  # Cloud Topology: References the node name(s) for each role
+  # within the cloud's topology.
+  topology:
+    ha_controller_node_names: ha_controller
+    kvm_compute_node_names: kvm_compute
+
+# ================================================================
+# Environment Information
+# ================================================================
+environment:
+  base: example-ibm-os-ha-controller-n-compute
+  default_attributes:
+    # (Optional) Add Default Environment Attributes
+
+  override_attributes:
+    # (Optional) Add Override Environment Attributes
+    ntp.servers: [0.pool.ntp.org, 1.pool.ntp.org, 2.pool.ntp.org, 3.pool.ntp.org]
+
+# ================================================================
+# HA Information
+# ================================================================
+ha:
+  # Cloud Virtual IP Address
+  virtual_ip_address: YOUR_VIRTUAL_IP_ADDRESS
+  # Deploy secondary HA controllers sequentially, or in parallel.
+  # Defaults to false to deploy in parallel.
+ #ha_controllers_deploy_run_sequentially: false
+  # The number of secondary HA controllers to deploy concurrently
+  # when deploying in parallel. Defaults to 10.
+ #ha_controllers_deploy_concurrency: 10
+
+# ================================================================
+# Node Information
+# ================================================================
+nodes:
+  - name: ha_controller
+    description: Cloud HA controller node
+    # Provide FQDN for 3 or more nodes. The node information is
+    # applied to all nodes in the list. Copy this ha_controller
+    # node section for nodes that do not share the same node
+    # information.
+    fqdn:
+      - YOUR_HA_CONTROLLER_NODE_1_FQDN
+      - YOUR_HA_CONTROLLER_NODE_2_FQDN
+      - YOUR_HA_CONTROLLER_NODE_3_FQDN
+      # Add more HA controller nodes as needed.
+    password: ~
+    identity_file: ~
+    nics:
+      management_network: eth0
+      data_network: eth1
+    # (Optional) Node Attribute JSON File
+    attribute_file: ~
+    # (Optional) Controller SSL certificate and private key files used
+    # only when the fips_compliance cloud feature is enabled. These
+    # values are not required. If not specified, the cert_file and
+    # key_file will be created automatically, and placed on the Chef
+    # server. Only specify these values if the fips_compliance cloud
+    # feature is enabled, and you are providing your own cloud SSL
+    # certificate chain file, and controller SSL certificate and
+    # private key files for FIPS compliance. If the SSL certificate
+    # and key files are different for each controller, the controllers
+    # must be specified in their own node entry section with a single
+    # fqdn value.
+  # cert_file: YOUR_CONTROLLER_CERTIFICATE_FILE_LOCATION
+  # key_file: YOUR_CONTROLLER_PRIVATE_KEY_FILE_LOCATION
+  - name: kvm_compute
+    description: Cloud KVM compute node
+    # Provide FQDN for 1 or more nodes. The node information is
+    # applied to all nodes in the list. Copy this kvm_compute
+    # node section for nodes that do not share the same node
+    # information.
+    fqdn:
+      - YOUR_KVM_COMPUTE_NODE_1_FQDN
+      # Add more compute nodes as needed.
+    password: ~
+    identity_file: ~
+    nics:
+      management_network: eth0
+      data_network: eth1
+    # (Optional) Node Attribute JSON File
+    attribute_file: ~

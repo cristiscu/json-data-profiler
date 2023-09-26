@@ -4,50 +4,19 @@ Creation Date: Sep 2023
 Company:       XtractPro Software
 """
 
-from json_classes import JsonManager, Val, Prop, Obj, Arr
-
-# ==========================================================================
-class Theme:
-    def __init__(self, color, fillcolor, fillcolorC,
-            bgcolor, icolor, tcolor, style, shape, pencolor, penwidth):
-        self.color = color
-        self.fillcolor = fillcolor
-        self.fillcolorC = fillcolorC
-        self.bgcolor = bgcolor
-        self.icolor = icolor
-        self.tcolor = tcolor
-        self.style = style
-        self.shape = shape
-        self.pencolor = pencolor
-        self.penwidth = penwidth
-
-    @classmethod
-    def getThemes(cls):
-        return {
-            "Common Gray": Theme("#6c6c6c", "#e0e0e0", "#f5f5f5",
-                "#e0e0e0", "#000000", "#000000", "rounded", "Mrecord", "#696969", "1"),
-            "Blue Navy": Theme("#1a5282", "#1a5282", "#ffffff",
-                "#1a5282", "#000000", "#ffffff", "rounded", "Mrecord", "#0078d7", "2"),
-            "Gradient Green": Theme("#716f64", "#008080:#ffffff", "#008080:#ffffff",
-                "transparent", "#000000", "#000000", "rounded", "Mrecord", "#696969", "1"),
-            "Blue Sky": Theme("#716f64", "#d3dcef:#ffffff", "#d3dcef:#ffffff",
-                "transparent", "#000000", "#000000", "rounded", "Mrecord", "#696969", "1"),
-            "Common Gray Box": Theme("#6c6c6c", "#e0e0e0", "#f5f5f5",
-                "#e0e0e0", "#000000", "#000000", "rounded", "record", "#696969", "1")
-        }
+from config import Config
+from json_classes import Obj, Arr
 
 # ==========================================================================
 class ERDManager:
+    tables = {}
+    obj = None
+
     def __new__(cls):
         raise TypeError("This is a static class and cannot be instantiated.")
 
-    tables = {}
-    obj = None
-    show_types = True
-    remove_dups = False
-
     @classmethod
-    def getTables(cls, obj):
+    def getEntities(cls, obj):
         cls.tables = {}
         cls.obj = obj
         if isinstance(obj, Arr):
@@ -55,11 +24,13 @@ class ERDManager:
                 cls._getTable(o, True)
         else:
             cls._getTable(obj, True)
+        if Config.remove_dups:
+            cls._removeDuplTables()
         return cls.tables
 
     @classmethod    
-    def getTopObjName(cls):
-        return "JSON ARRAY" if isinstance(cls.obj, Arr) else "JSON OBJECT"
+    def getTopObjLabel(cls):
+        return "JSON_ARRAY" if isinstance(cls.obj, Arr) else "JSON_OBJECT"
 
     @classmethod
     def _getTable(cls, obj, isTop=False):
@@ -77,37 +48,65 @@ class ERDManager:
             col.count = prop.count
 
             if isinstance(prop.val.val, Obj):
-                col.datatype = cls._getTable(prop.val.val)
+                col.obj = cls._getTable(prop.val.val)
             elif not isinstance(prop.val.val, Arr):
                 col.datatype = prop.val.type
             elif prop.val.val.hasPrimitives():
                 col.datatype = f"{prop.val.val.getPrimitiveType()}[]"
             else:
-                col.datatype = []
-                for o in prop.val.val.objs:
-                    col.datatype.append(cls._getTable(o))
+                for obj1 in prop.val.val.objs:
+                    col.arr.append(cls._getTable(obj1))
         return table
 
     @classmethod
-    def createGraph(cls, tables, theme):
+    def getEmptyDotShape(cls, label, theme):
+        return (f'  {label} [fillcolor="{theme.fillcolorC}" color="{theme.color}"'
+            + ' penwidth="1" shape="point" label=" "]\n')
+
+    @classmethod
+    def createGraph(cls, theme):
         s = ('digraph {\n'
             + '  graph [ rankdir="RL" bgcolor="#ffffff" ]\n'
             + f'  node [ style="filled" shape="{theme.shape}" gradientangle="180" ]\n'
-            + '  edge [ arrowhead="none" arrowtail="normal" dir="both" ]\n\n')
+            + '  edge [ arrowhead="none" arrowtail="normal" dir="both" ]\n\n'
+            + cls.getEmptyDotShape(cls.getTopObjLabel(), theme))
 
-        top_name = cls.getTopObjName()
-        top_label = top_name.replace(" ", "_")
-        s += (f'  {top_label} [ label="{top_name}"\n'
-            + f'    fillcolor="{theme.fillcolorC}" color="{theme.color}" penwidth="1" style="dashed"\n'
-            + '  ]\n')
-
-        for name in tables:
-            s += tables[name].getDotShape(theme)
+        for name in cls.tables: s += cls.tables[name].getDotShape(theme)
         s += "\n"
-        for name in tables:
-            s += tables[name].getDotLinks(theme)
+        for name in cls.tables: s += cls.tables[name].getDotLinks(theme)
         s += "}\n"
         return s
+    
+    @classmethod
+    def _removeDuplTables(cls):
+        while True:
+            table1, table2 = cls._findSimilar()
+            if table1 is None: return
+            cls._replaceTable(table1, table2)
+
+    @classmethod
+    def _findSimilar(cls):
+        for key1 in cls.tables:
+            table1 = cls.tables[key1]
+            for key2 in cls.tables:
+                table2 = cls.tables[key2]
+                if table1 != table2 and table1.isSimilarWith(table2):
+                    return table1, table2
+        return None, None
+
+    @classmethod
+    def _replaceTable(cls, table1, table2):
+        for key in cls.tables:
+            table = cls.tables[key]
+            for col in table.columns:
+                if col.obj is not None and col.obj == table1:
+                    col.obj = table2
+                elif len(col.arr) > 0:
+                    for obj in col.arr:
+                        if obj == table1:
+                            col.arr.remove(table1)
+                            col.arr.append(table2)
+        del cls.tables[table1.name]
 
 # ==========================================================================
 class Column:
@@ -117,26 +116,29 @@ class Column:
         self.name = name
         self.count = 0
         self.nullable = True
-        self.datatype = None        # string/Table
+
+        self.datatype = None        # string, string[]
+        self.obj = None             # Table
+        self.arr = []               # [Table, ...] <-- array of array?
 
     def getName(self):
         name = self.name
         if self.nullable: name = f"{name}*"
-        if ERDManager.show_types and isinstance(self.datatype, list): name += "[]"
+        if Config.show_types and len(self.arr) > 0: name += "[]"
         #if JsonManager.show_counts: name = f'{name} ({self.count})'
         return name
 
     def isSimilarWith(self, col) -> bool:
         if col.nullable != self.nullable: return False
-        if isinstance(col.datatype, str) and isinstance(self.datatype, str):
+        if col.datatype is not None and self.datatype is not None:
             return col.datatype == self.datatype
-        if isinstance(col.datatype, Table) and isinstance(self.datatype, Table):
-            return col.datatype.name == self.datatype.name
-        if isinstance(col.datatype, list) and isinstance(self.datatype, list):
-            for type in self.datatype:
-                if type not in col.datatype: return False
-            for type in col.datatype:
-                if type not in self.datatype: return False
+        if col.obj is not None and self.obj is not None:
+            return col.obj == self.obj
+        if len(col.arr) > 0 and len(self.arr) > 0:
+            for type in self.arr:
+                if type not in col.arr: return False
+            for type in col.arr:
+                if type not in self.arr: return False
         return True
 
 # ==========================================================================
@@ -145,6 +147,7 @@ class Table:
         self.obj = obj
         self.name = name
         self.isTop = False
+        
         self.columns = []           # list of all columns
 
     def getColumn(self, name):
@@ -166,7 +169,7 @@ class Table:
     def getDotShape(self, theme):
         s = self.getDotColumns(theme)
         if len(s) == 0:
-            return (f'  {self.name} [fillcolor="{theme.fillcolorC}" color="{theme.color}" penwidth="1" shape="point" label=" "]\n')
+            return ERDManager.getEmptyDotShape(self.name, theme)
         return (f'  {self.name} [\n'
             + f'    fillcolor="{theme.fillcolorC}" color="{theme.color}" penwidth="1"\n'
             + f'    label=<<table style="{theme.style}" border="0" cellborder="0" cellspacing="0" cellpadding="1">\n'
@@ -175,31 +178,32 @@ class Table:
 
     def getDotColumns(self, theme):
         s = ""
-        for column in self.columns:
-            if isinstance(column.datatype, str):
-                s += f'      <tr><td align="left"><font color="{theme.icolor}">{column.getName()}&nbsp;</font></td>'
-                if ERDManager.show_types:
-                    s += f'\n        <td align="left"><font color="{theme.icolor}">{column.datatype}</font></td>'
-                s += '</tr>\n'
+        for col in self.columns:
+            if col.datatype is not None:
+                if not Config.show_types:
+                    s += f'      <tr><td align="left"><font color="{theme.icolor}">{col.getName()}</font></td></tr>\n'
+                else:
+                    s += (f'      <tr><td align="left"><font color="{theme.icolor}">{col.getName()}</font></td>\n'
+                        + f'      <td align="left"><font color="{theme.icolor}">{col.datatype}</font></td></tr>\n')
         return s
 
-    def getDotLinks(self, theme):
-        s = ""
-        if self.isTop:
-            top_name = ERDManager.getTopObjName()
-            top_label = top_name.replace(" ", "_")
-            dashed = "" if top_name == "JSON OBJECT" else ' style="dashed"'
-            s += f'  {self.name} -> {top_label} [ penwidth="{theme.penwidth}" color="{theme.pencolor}"{dashed} ]\n'
+    def getTopDotLink(self, theme):
+        if not self.isTop: return ""
+        top_label = ERDManager.getTopObjLabel()
+        array = "" if top_label == "JSON_OBJECT" else ' arrowtail="crow" style="dashed"'
+        return f'  {self.name} -> {top_label} [ penwidth="{theme.penwidth}" color="{theme.pencolor}"{array} ]\n'
 
-        for column in self.columns:
-            if not isinstance(column.datatype, str):
-                dashed = "" if not column.nullable else ' style="dashed"'
-                label = f' label="{column.getName()}"'
-                if isinstance(column.datatype, Table):
-                    s += (f'  {column.datatype.name} -> {self.name}'
+    def getDotLinks(self, theme):
+        s = "" if not self.isTop else self.getTopDotLink(theme)
+        for col in self.columns:
+            if col.datatype is None:
+                dashed = "" if not col.nullable else ' style="dashed"'
+                label = f' label=<<i>{col.getName()}</i>>'
+                if col.obj is not None:
+                    s += (f'  {col.obj.name} -> {self.name}'
                         + f' [ penwidth="{theme.penwidth}" color="{theme.pencolor}"{dashed}{label} ]\n')
                 else:
-                    for o in column.datatype:
-                        s += (f'  {o.name} -> {self.name}'
+                    for obj in col.arr:
+                        s += (f'  {obj.name} -> {self.name}'
                             + f' [ penwidth="{theme.penwidth}" color="{theme.pencolor}"{dashed}{label} arrowtail="crow" ]\n')
         return s
