@@ -121,7 +121,7 @@ Assume the following object model generated in one of the previous phases, refle
 
 The *indoor* and *outdoor* properties each return objects with similar properties (*type*, *minitems*, and *uniqueitems*). Which further, through *items*, return other potentially reusable objects (with *description* and *type* properties). Another similar entity with these last two properties is returned before by the *id* property.
 
-After consolidation, all the duplicate entities will be combined into one single entities, with all existing links redirected. The *indoor* and *outdoor* properties will now point to one single entity. And the three entities with *description* and *type* have been combined into one single shape:
+After consolidation, all the duplicate entities will be combined into one single entity, with all related links redirected. The *indoor* and *outdoor* properties will now point to one single entity. And the three entities with *description* and *type* have been combined into one single shape:
 
 ![after-consolidation](images/after-consolidation.png)
 
