@@ -130,5 +130,4 @@ Setup Instructions
 * Clone the repository locally, and open it in VSCode or some other IDE.
 * Create and activate a virtual environment.
 * Install all the dependencies from the **requirements.txt** file.
-* Run **`streamlit run src/app.py`**. Terminate the web session with CTRL+C.
-
+* Switch to the **src** folder and run **`streamlit run app.py`**. Terminate the web session with CTRL+C.

@@ -8,17 +8,22 @@ import json, yaml, xmltodict, urllib.parse
 from io import StringIO
 import streamlit as st
 
-from config import Config, Theme
+from config import Config
 from json_classes import JsonManager
 from erd_classes import ERDManager
 
 def loadFile():
+    filename = "test.json" if uploaded_file is None else uploaded_file.name
+    filename = filename.lower()
     if 'filename' not in st.session_state \
-        or st.session_state.filename != uploaded_file.name:
-        bytes = uploaded_file.getvalue()
-        raw = StringIO(bytes.decode("utf-8")).read()
+        or st.session_state.filename != filename:
+        if uploaded_file is not None:
+            bytes = uploaded_file.getvalue()
+            raw = StringIO(bytes.decode("utf-8")).read()
+        else:
+            with open(filename) as f:
+                raw = f.read()
 
-        filename = uploaded_file.name.lower()
         if filename.endswith(".yml") or filename.endswith(".yaml"):
             text = json.dumps(yaml.safe_load(raw), indent=3)
             filetype = "yaml"
@@ -34,7 +39,7 @@ def loadFile():
             st.error("Bad Format!")
             st.stop()
         
-        st.session_state['filename'] = uploaded_file.name
+        st.session_state['filename'] = filename
         st.session_state['filetype'] = filetype
         st.session_state["raw"] = raw
         st.session_state["text"] = text
@@ -46,11 +51,12 @@ def loadFile():
     data = st.session_state.data
     return raw, text, data
 
-def renderFile(raw, text, data, theme):
+def renderFile():
+    raw, text, data = loadFile()
     objects = JsonManager.inferSchema(data)
     schema = objects.dump()
     ERDManager.getEntities(objects)
-    chart = ERDManager.createGraph(theme)
+    chart = ERDManager.createGraph()
 
     if st.session_state.filetype != "json":
         tabRowName = "YAML Source File" if st.session_state.filetype == "yaml" else "XML Source File"
@@ -127,13 +133,12 @@ Config.str_truncate = st.sidebar.slider("Max Sample String Length",
     disabled=not Config.show_samples,
     help="Truncate displayed string values after a number of characters")
 
-themes = Theme.getThemes()
-theme = st.sidebar.selectbox('Theme:', tuple(themes.keys()), index=0,
+Config.loadThemes()
+themeName = st.sidebar.selectbox('Theme:', tuple(Config.themes.keys()), index=0,
     help="Color theme for the ERD")
+Config.theme = Config.themes[themeName]
 
-if uploaded_file is None:
-    st.write("Click on the 'Browse files' button on the sidebar to load a file.")
-else:
-    raw, text, data = loadFile()
-    renderFile(raw, text, data, themes[theme])
-
+#if uploaded_file is None:
+#    st.write("Click on the 'Browse files' button on the sidebar to load a file.")
+#else:
+renderFile()

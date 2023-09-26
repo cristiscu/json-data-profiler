@@ -59,21 +59,21 @@ class ERDManager:
         return table
 
     @classmethod
-    def getEmptyDotShape(cls, label, theme):
-        return (f'  {label} [fillcolor="{theme.fillcolorC}" color="{theme.color}"'
+    def getEmptyDotShape(cls, label):
+        return (f'  {label} [fillcolor="{Config.theme.fillcolorC}" color="{Config.theme.color}"'
             + ' penwidth="1" shape="point" label=" "]\n')
 
     @classmethod
-    def createGraph(cls, theme):
+    def createGraph(cls):
         s = ('digraph {\n'
             + '  graph [ rankdir="RL" bgcolor="#ffffff" ]\n'
-            + f'  node [ style="filled" shape="{theme.shape}" gradientangle="180" ]\n'
+            + f'  node [ style="filled" shape="{Config.theme.shape}" gradientangle="180" ]\n'
             + '  edge [ arrowhead="none" arrowtail="normal" dir="both" ]\n\n'
-            + cls.getEmptyDotShape(cls.getTopObjLabel(), theme))
+            + cls.getEmptyDotShape(cls.getTopObjLabel()))
 
-        for name in cls.tables: s += cls.tables[name].getDotShape(theme)
+        for name in cls.tables: s += cls.tables[name].getDotShape()
         s += "\n"
-        for name in cls.tables: s += cls.tables[name].getDotLinks(theme)
+        for name in cls.tables: s += cls.tables[name].getDotLinks()
         s += "}\n"
         return s
     
@@ -166,44 +166,44 @@ class Table:
             if other is None or not col.isSimilarWith(other): return False
         return True
 
-    def getDotShape(self, theme):
-        s = self.getDotColumns(theme)
+    def getDotShape(self):
+        s = self.getDotColumns()
         if len(s) == 0:
-            return ERDManager.getEmptyDotShape(self.name, theme)
+            return ERDManager.getEmptyDotShape(self.name)
         return (f'  {self.name} [\n'
-            + f'    fillcolor="{theme.fillcolorC}" color="{theme.color}" penwidth="1"\n'
-            + f'    label=<<table style="{theme.style}" border="0" cellborder="0" cellspacing="0" cellpadding="1">\n'
+            + f'    fillcolor="{Config.theme.fillcolorC}" color="{Config.theme.color}" penwidth="1"\n'
+            + f'    label=<<table style="{Config.theme.style}" border="0" cellborder="0" cellspacing="0" cellpadding="1">\n'
             + s
             + f'    </table>>\n  ]\n')
 
-    def getDotColumns(self, theme):
+    def getDotColumns(self):
         s = ""
         for col in self.columns:
             if col.datatype is not None:
                 if not Config.show_types:
-                    s += f'      <tr><td align="left"><font color="{theme.icolor}">{col.getName()}</font></td></tr>\n'
+                    s += f'      <tr><td align="left"><font color="{Config.theme.icolor}">{col.getName()}</font></td></tr>\n'
                 else:
-                    s += (f'      <tr><td align="left"><font color="{theme.icolor}">{col.getName()}</font></td>\n'
-                        + f'      <td align="left"><font color="{theme.icolor}">{col.datatype}</font></td></tr>\n')
+                    s += (f'      <tr><td align="left"><font color="{Config.theme.icolor}">{col.getName()}</font></td>\n'
+                        + f'      <td align="left"><font color="{Config.theme.icolor}">{col.datatype}</font></td></tr>\n')
         return s
 
-    def getTopDotLink(self, theme):
+    def getTopDotLink(self):
         if not self.isTop: return ""
         top_label = ERDManager.getTopObjLabel()
         array = "" if top_label == "JSON_OBJECT" else ' arrowtail="crow" style="dashed"'
-        return f'  {self.name} -> {top_label} [ penwidth="{theme.penwidth}" color="{theme.pencolor}"{array} ]\n'
+        return f'  {self.name} -> {top_label} [ penwidth="{Config.theme.penwidth}" color="{Config.theme.pencolor}"{array} ]\n'
 
-    def getDotLinks(self, theme):
-        s = "" if not self.isTop else self.getTopDotLink(theme)
+    def getDotLinks(self):
+        s = "" if not self.isTop else self.getTopDotLink()
         for col in self.columns:
             if col.datatype is None:
                 dashed = "" if not col.nullable else ' style="dashed"'
                 label = f' label=<<i>{col.getName()}</i>>'
                 if col.obj is not None:
                     s += (f'  {col.obj.name} -> {self.name}'
-                        + f' [ penwidth="{theme.penwidth}" color="{theme.pencolor}"{dashed}{label} ]\n')
+                        + f' [ penwidth="{Config.theme.penwidth}" color="{Config.theme.pencolor}"{dashed}{label} ]\n')
                 else:
                     for obj in col.arr:
                         s += (f'  {obj.name} -> {self.name}'
-                            + f' [ penwidth="{theme.penwidth}" color="{theme.pencolor}"{dashed}{label} arrowtail="crow" ]\n')
+                            + f' [ penwidth="{Config.theme.penwidth}" color="{Config.theme.pencolor}"{dashed}{label} arrowtail="crow" ]\n')
         return s
