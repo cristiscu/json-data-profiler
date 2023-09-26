@@ -19,13 +19,15 @@ def loadFile():
         raw = StringIO(bytes.decode("utf-8")).read()
 
         filename = uploaded_file.name.lower()
-        filetype = "json"
         if filename.endswith(".yml") or filename.endswith(".yaml"):
             text = json.dumps(yaml.safe_load(raw), indent=3)
             filetype = "yaml"
         elif filename.endswith(".xml"):
             text = json.dumps(xmltodict.parse(raw), indent=3)
             filetype = "xmlDoc"
+        else:
+            text = raw
+            filetype = "json"
 
         data = json.loads(text)
         if not isinstance(data, dict) and not isinstance(data, list):
@@ -45,19 +47,22 @@ def loadFile():
     return raw, text, data
 
 def renderFile(raw, text, data, theme):
-    map = { "xmlDoc": "XML", "yaml": "YAML", "json": "JSON" }
-    tabRowName = f"Raw {map[st.session_state.filetype]} Source File"
-    tabRaw, tabSource, tabSchema, tabERD, tabDOT = st.tabs(
-        [tabRowName, "Formatted Source File", "Inferred Schema", "Inferred Object Model", "Generated Script"])
-
     objects = JsonManager.inferSchema(data)
     schema = objects.dump()
     ERDManager.getEntities(objects)
     chart = ERDManager.createGraph(theme)
 
-    with tabRaw:
-        st.caption("This is your raw uploaded file. Switch to the other tabs to see the inferred schema.")
-        st.code(raw, language=st.session_state.filetype, line_numbers=Config.show_line_numbers)
+    if st.session_state.filetype != "json":
+        tabRowName = "YAML Source File" if st.session_state.filetype == "yaml" else "XML Source File"
+        tabRaw, tabSource, tabSchema, tabERD, tabDOT = st.tabs(
+            [tabRowName, "Converted to JSON Source File", "Inferred Schema", "Inferred Object Model", "Generated Script"])
+
+        with tabRaw:
+            st.caption("This is your raw uploaded file. Switch to the other tabs to see the inferred schema.")
+            st.code(raw, language=st.session_state.filetype, line_numbers=Config.show_line_numbers)
+    else:
+        tabSource, tabSchema, tabERD, tabDOT = st.tabs(
+            ["JSON Source File", "Inferred Schema", "Inferred Object Model", "Generated Script"])
 
     with tabSource:
         st.caption("This is your eventually converted and formatted source file, in JSON.")
@@ -89,7 +94,7 @@ st.title("JSON Data Profiler")
 st.caption("Upload a JSON, YAML or XML data file, and get its inferred schema and a Entity-Relationship diagram.")
 
 uploaded_file = st.sidebar.file_uploader(
-    "Upload a JSON/XML/YML file", accept_multiple_files=False)
+    "Upload a JSON, XML, or YML file", accept_multiple_files=False)
 
 Config.single_object = st.sidebar.checkbox("Single Top Array Object",
     value=Config.single_object,
