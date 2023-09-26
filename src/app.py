@@ -4,9 +4,12 @@ Creation Date: Sep 2023
 Company:       XtractPro Software
 """
 
-import json, yaml, xmltodict, urllib.parse
-from io import StringIO
+import json
+import yaml
+import xmltodict
+import urllib.parse
 import streamlit as st
+from io import StringIO
 
 from config import Config
 from json_classes import JsonManager
