@@ -1,6 +1,8 @@
 JSON Data Profiler
 ==================
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://cristiscu-json-data-profiler-app-ioixke.streamlit.app/)
+
 Extracts metadata information from any JSON, XML or YAML data file, and generates an inferred schema, in JSON format. Then creates a visual entity-relationship diagram using GraphViz. Any XML or YAML file is first converted to JSON.
 
 Inferred Schema Generation Options
@@ -131,3 +133,4 @@ Setup Instructions
 * Create and activate a virtual environment.
 * Install all the dependencies from the **requirements.txt** file.
 * Run **`streamlit run app.py`**. Terminate the web session with CTRL+C.
+
